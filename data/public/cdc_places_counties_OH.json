@@ -1,0 +1,4941 @@
+{
+"source": "data.cdc.gov \u2014 CDC PLACES",
+"dataset_id": "i46a-9kgh",
+"dataset_title": "PLACES: County Data (GIS Friendly Format), 2025 release",
+"dataset_url": "https://data.cdc.gov/d/i46a-9kgh",
+"release_year": 2025,
+"modified": "2026-09-22",
+"fetched": "2026-11-01",
+"state": "OH",
+"caveat": "Model-based small-area estimates from BRFSS survey data, for all adults in the county regardless of insurance. Not HEDIS rates; use for where-to-focus, not for performance.",
+"counties": [
+{
+"county": "Franklin",
+"fips": "39049",
+"population": 1326063,
+"adults": 1019364,
+"indicators": {
+"colon_screen": {
+"crude": 62.8,
+"adjusted": 58.9,
+"ci_low": 59.2,
+"ci_high": 66.0
+},
+"mammouse": {
+"crude": 78.1,
+"adjusted": 77.8,
+"ci_low": 72.9,
+"ci_high": 82.6
+},
+"checkup": {
+"crude": 79.6,
+"adjusted": 79.7,
+"ci_low": 77.1,
+"ci_high": 82.0
+},
+"bpmed": {
+"crude": 76.2,
+"adjusted": 62.3,
+"ci_low": 73.7,
+"ci_high": 78.7
+},
+"access2": {
+"crude": 8.4,
+"adjusted": 8.3,
+"ci_low": 6.5,
+"ci_high": 10.4
+},
+"diabetes": {
+"crude": 11.8,
+"adjusted": 11.8,
+"ci_low": 10.4,
+"ci_high": 13.4
+},
+"bphigh": {
+"crude": 32.9,
+"adjusted": 33.0,
+"ci_low": 30.4,
+"ci_high": 35.6
+},
+"depression": {
+"crude": 25.8,
+"adjusted": 25.6,
+"ci_low": 23.2,
+"ci_high": 28.5
+}
+}
+},
+{
+"county": "Cuyahoga",
+"fips": "39035",
+"population": 1233088,
+"adults": 982384,
+"indicators": {
+"colon_screen": {
+"crude": 66.2,
+"adjusted": 60.3,
+"ci_low": 62.6,
+"ci_high": 69.6
+},
+"mammouse": {
+"crude": 78.7,
+"adjusted": 78.2,
+"ci_low": 73.8,
+"ci_high": 83.2
+},
+"checkup": {
+"crude": 80.1,
+"adjusted": 78.1,
+"ci_low": 77.5,
+"ci_high": 82.5
+},
+"bpmed": {
+"crude": 78.8,
+"adjusted": 60.6,
+"ci_low": 76.5,
+"ci_high": 80.9
+},
+"access2": {
+"crude": 8.4,
+"adjusted": 8.6,
+"ci_low": 6.7,
+"ci_high": 10.3
+},
+"diabetes": {
+"crude": 13.4,
+"adjusted": 11.3,
+"ci_low": 11.8,
+"ci_high": 15.1
+},
+"bphigh": {
+"crude": 38.5,
+"adjusted": 34.2,
+"ci_low": 35.7,
+"ci_high": 41.3
+},
+"depression": {
+"crude": 23.9,
+"adjusted": 24.7,
+"ci_low": 21.2,
+"ci_high": 26.6
+}
+}
+},
+{
+"county": "Hamilton",
+"fips": "39061",
+"population": 827058,
+"adults": 638290,
+"indicators": {
+"colon_screen": {
+"crude": 66.3,
+"adjusted": 60.7,
+"ci_low": 62.2,
+"ci_high": 70.1
+},
+"mammouse": {
+"crude": 79.0,
+"adjusted": 78.6,
+"ci_low": 73.5,
+"ci_high": 83.7
+},
+"checkup": {
+"crude": 79.7,
+"adjusted": 78.7,
+"ci_low": 76.9,
+"ci_high": 82.3
+},
+"bpmed": {
+"crude": 79.2,
+"adjusted": 63.1,
+"ci_low": 76.8,
+"ci_high": 81.4
+},
+"access2": {
+"crude": 7.7,
+"adjusted": 7.8,
+"ci_low": 5.9,
+"ci_high": 9.6
+},
+"diabetes": {
+"crude": 13.2,
+"adjusted": 11.9,
+"ci_low": 11.6,
+"ci_high": 15.1
+},
+"bphigh": {
+"crude": 36.3,
+"adjusted": 33.9,
+"ci_low": 33.3,
+"ci_high": 39.5
+},
+"depression": {
+"crude": 25.4,
+"adjusted": 25.9,
+"ci_low": 22.6,
+"ci_high": 28.5
+}
+}
+},
+{
+"county": "Summit",
+"fips": "39153",
+"population": 535733,
+"adults": 425767,
+"indicators": {
+"colon_screen": {
+"crude": 68.7,
+"adjusted": 62.6,
+"ci_low": 65.0,
+"ci_high": 72.1
+},
+"mammouse": {
+"crude": 71.7,
+"adjusted": 71.6,
+"ci_low": 65.4,
+"ci_high": 77.1
+},
+"checkup": {
+"crude": 81.2,
+"adjusted": 79.1,
+"ci_low": 78.3,
+"ci_high": 83.8
+},
+"bpmed": {
+"crude": 80.2,
+"adjusted": 61.7,
+"ci_low": 77.6,
+"ci_high": 82.6
+},
+"access2": {
+"crude": 7.4,
+"adjusted": 7.6,
+"ci_low": 5.6,
+"ci_high": 9.4
+},
+"diabetes": {
+"crude": 13.7,
+"adjusted": 11.4,
+"ci_low": 12.0,
+"ci_high": 15.7
+},
+"bphigh": {
+"crude": 37.5,
+"adjusted": 32.9,
+"ci_low": 34.1,
+"ci_high": 40.8
+},
+"depression": {
+"crude": 25.8,
+"adjusted": 26.8,
+"ci_low": 22.5,
+"ci_high": 29.1
+}
+}
+},
+{
+"county": "Montgomery",
+"fips": "39113",
+"population": 533796,
+"adults": 415836,
+"indicators": {
+"colon_screen": {
+"crude": 65.1,
+"adjusted": 58.7,
+"ci_low": 62.4,
+"ci_high": 67.8
+},
+"mammouse": {
+"crude": 76.9,
+"adjusted": 76.5,
+"ci_low": 73.0,
+"ci_high": 80.6
+},
+"checkup": {
+"crude": 80.8,
+"adjusted": 79.1,
+"ci_low": 77.8,
+"ci_high": 83.3
+},
+"bpmed": {
+"crude": 78.9,
+"adjusted": 61.0,
+"ci_low": 76.4,
+"ci_high": 81.2
+},
+"access2": {
+"crude": 7.9,
+"adjusted": 8.1,
+"ci_low": 6.3,
+"ci_high": 9.9
+},
+"diabetes": {
+"crude": 14.5,
+"adjusted": 12.5,
+"ci_low": 12.7,
+"ci_high": 16.4
+},
+"bphigh": {
+"crude": 37.0,
+"adjusted": 33.4,
+"ci_low": 33.8,
+"ci_high": 40.3
+},
+"depression": {
+"crude": 25.9,
+"adjusted": 26.7,
+"ci_low": 22.7,
+"ci_high": 29.2
+}
+}
+},
+{
+"county": "Lucas",
+"fips": "39095",
+"population": 425484,
+"adults": 329145,
+"indicators": {
+"colon_screen": {
+"crude": 65.3,
+"adjusted": 60.1,
+"ci_low": 61.5,
+"ci_high": 69.1
+},
+"mammouse": {
+"crude": 74.2,
+"adjusted": 73.8,
+"ci_low": 68.2,
+"ci_high": 79.6
+},
+"checkup": {
+"crude": 80.8,
+"adjusted": 79.2,
+"ci_low": 77.9,
+"ci_high": 83.3
+},
+"bpmed": {
+"crude": 79.9,
+"adjusted": 62.9,
+"ci_low": 77.5,
+"ci_high": 82.0
+},
+"access2": {
+"crude": 9.0,
+"adjusted": 9.3,
+"ci_low": 7.2,
+"ci_high": 11.1
+},
+"diabetes": {
+"crude": 14.0,
+"adjusted": 12.2,
+"ci_low": 12.4,
+"ci_high": 15.8
+},
+"bphigh": {
+"crude": 37.2,
+"adjusted": 33.8,
+"ci_low": 34.2,
+"ci_high": 40.2
+},
+"depression": {
+"crude": 26.2,
+"adjusted": 26.9,
+"ci_low": 23.1,
+"ci_high": 29.3
+}
+}
+},
+{
+"county": "Butler",
+"fips": "39017",
+"population": 393043,
+"adults": 302288,
+"indicators": {
+"colon_screen": {
+"crude": 63.2,
+"adjusted": 58.1,
+"ci_low": 58.7,
+"ci_high": 67.3
+},
+"mammouse": {
+"crude": 78.8,
+"adjusted": 78.5,
+"ci_low": 72.7,
+"ci_high": 84.3
+},
+"checkup": {
+"crude": 80.3,
+"adjusted": 79.2,
+"ci_low": 77.2,
+"ci_high": 83.2
+},
+"bpmed": {
+"crude": 77.8,
+"adjusted": 60.8,
+"ci_low": 75.2,
+"ci_high": 80.3
+},
+"access2": {
+"crude": 7.9,
+"adjusted": 8.3,
+"ci_low": 6.3,
+"ci_high": 10.0
+},
+"diabetes": {
+"crude": 12.5,
+"adjusted": 11.3,
+"ci_low": 10.9,
+"ci_high": 14.3
+},
+"bphigh": {
+"crude": 35.3,
+"adjusted": 33.2,
+"ci_low": 31.8,
+"ci_high": 38.7
+},
+"depression": {
+"crude": 25.7,
+"adjusted": 26.1,
+"ci_low": 22.4,
+"ci_high": 29.0
+}
+}
+},
+{
+"county": "Stark",
+"fips": "39151",
+"population": 372716,
+"adults": 292739,
+"indicators": {
+"colon_screen": {
+"crude": 64.8,
+"adjusted": 59.0,
+"ci_low": 60.3,
+"ci_high": 68.8
+},
+"mammouse": {
+"crude": 72.3,
+"adjusted": 71.4,
+"ci_low": 65.6,
+"ci_high": 78.4
+},
+"checkup": {
+"crude": 79.1,
+"adjusted": 76.4,
+"ci_low": 76.0,
+"ci_high": 82.0
+},
+"bpmed": {
+"crude": 80.3,
+"adjusted": 60.8,
+"ci_low": 77.8,
+"ci_high": 82.6
+},
+"access2": {
+"crude": 7.8,
+"adjusted": 8.1,
+"ci_low": 6.0,
+"ci_high": 9.8
+},
+"diabetes": {
+"crude": 13.7,
+"adjusted": 11.1,
+"ci_low": 11.8,
+"ci_high": 15.7
+},
+"bphigh": {
+"crude": 38.5,
+"adjusted": 33.2,
+"ci_low": 34.7,
+"ci_high": 42.1
+},
+"depression": {
+"crude": 25.1,
+"adjusted": 26.4,
+"ci_low": 21.7,
+"ci_high": 28.5
+}
+}
+},
+{
+"county": "Lorain",
+"fips": "39093",
+"population": 317910,
+"adults": 249779,
+"indicators": {
+"colon_screen": {
+"crude": 65.4,
+"adjusted": 59.3,
+"ci_low": 60.9,
+"ci_high": 69.5
+},
+"mammouse": {
+"crude": 74.4,
+"adjusted": 73.5,
+"ci_low": 67.4,
+"ci_high": 80.3
+},
+"checkup": {
+"crude": 80.2,
+"adjusted": 77.5,
+"ci_low": 77.2,
+"ci_high": 83.0
+},
+"bpmed": {
+"crude": 80.6,
+"adjusted": 61.5,
+"ci_low": 78.0,
+"ci_high": 82.9
+},
+"access2": {
+"crude": 8.6,
+"adjusted": 9.1,
+"ci_low": 6.8,
+"ci_high": 10.6
+},
+"diabetes": {
+"crude": 14.2,
+"adjusted": 11.5,
+"ci_low": 12.3,
+"ci_high": 16.3
+},
+"bphigh": {
+"crude": 38.8,
+"adjusted": 33.4,
+"ci_low": 35.0,
+"ci_high": 42.5
+},
+"depression": {
+"crude": 25.2,
+"adjusted": 26.4,
+"ci_low": 21.9,
+"ci_high": 28.6
+}
+}
+},
+{
+"county": "Warren",
+"fips": "39165",
+"population": 252148,
+"adults": 192654,
+"indicators": {
+"colon_screen": {
+"crude": 66.9,
+"adjusted": 63.6,
+"ci_low": 62.2,
+"ci_high": 71.4
+},
+"mammouse": {
+"crude": 79.1,
+"adjusted": 79.1,
+"ci_low": 72.5,
+"ci_high": 84.5
+},
+"checkup": {
+"crude": 79.7,
+"adjusted": 77.9,
+"ci_low": 76.5,
+"ci_high": 82.8
+},
+"bpmed": {
+"crude": 79.4,
+"adjusted": 60.8,
+"ci_low": 76.5,
+"ci_high": 81.9
+},
+"access2": {
+"crude": 6.0,
+"adjusted": 6.3,
+"ci_low": 4.6,
+"ci_high": 7.6
+},
+"diabetes": {
+"crude": 11.0,
+"adjusted": 9.4,
+"ci_low": 9.3,
+"ci_high": 12.7
+},
+"bphigh": {
+"crude": 32.2,
+"adjusted": 28.8,
+"ci_low": 28.6,
+"ci_high": 35.9
+},
+"depression": {
+"crude": 22.7,
+"adjusted": 23.3,
+"ci_low": 19.6,
+"ci_high": 26.1
+}
+}
+},
+{
+"county": "Lake",
+"fips": "39085",
+"population": 231640,
+"adults": 187614,
+"indicators": {
+"colon_screen": {
+"crude": 67.4,
+"adjusted": 60.4,
+"ci_low": 62.8,
+"ci_high": 71.8
+},
+"mammouse": {
+"crude": 78.2,
+"adjusted": 76.9,
+"ci_low": 72.0,
+"ci_high": 83.8
+},
+"checkup": {
+"crude": 81.3,
+"adjusted": 78.4,
+"ci_low": 78.2,
+"ci_high": 84.2
+},
+"bpmed": {
+"crude": 81.1,
+"adjusted": 60.9,
+"ci_low": 78.4,
+"ci_high": 83.5
+},
+"access2": {
+"crude": 7.1,
+"adjusted": 7.5,
+"ci_low": 5.5,
+"ci_high": 8.9
+},
+"diabetes": {
+"crude": 12.9,
+"adjusted": 10.2,
+"ci_low": 11.1,
+"ci_high": 14.9
+},
+"bphigh": {
+"crude": 37.9,
+"adjusted": 31.9,
+"ci_low": 34.2,
+"ci_high": 41.8
+},
+"depression": {
+"crude": 24.6,
+"adjusted": 25.9,
+"ci_low": 21.2,
+"ci_high": 28.2
+}
+}
+},
+{
+"county": "Mahoning",
+"fips": "39099",
+"population": 225596,
+"adults": 179979,
+"indicators": {
+"colon_screen": {
+"crude": 68.2,
+"adjusted": 61.4,
+"ci_low": 64.1,
+"ci_high": 72.2
+},
+"mammouse": {
+"crude": 78.2,
+"adjusted": 76.7,
+"ci_low": 72.5,
+"ci_high": 83.4
+},
+"checkup": {
+"crude": 79.4,
+"adjusted": 76.3,
+"ci_low": 76.6,
+"ci_high": 82.6
+},
+"bpmed": {
+"crude": 81.7,
+"adjusted": 62.5,
+"ci_low": 79.6,
+"ci_high": 84.2
+},
+"access2": {
+"crude": 9.1,
+"adjusted": 9.6,
+"ci_low": 7.4,
+"ci_high": 11.3
+},
+"diabetes": {
+"crude": 14.8,
+"adjusted": 11.8,
+"ci_low": 12.9,
+"ci_high": 17.2
+},
+"bphigh": {
+"crude": 40.2,
+"adjusted": 34.1,
+"ci_low": 36.8,
+"ci_high": 44.3
+},
+"depression": {
+"crude": 24.5,
+"adjusted": 25.9,
+"ci_low": 21.8,
+"ci_high": 28.3
+}
+}
+},
+{
+"county": "Delaware",
+"fips": "39041",
+"population": 231636,
+"adults": 175070,
+"indicators": {
+"colon_screen": {
+"crude": 69.7,
+"adjusted": 67.1,
+"ci_low": 66.2,
+"ci_high": 73.1
+},
+"mammouse": {
+"crude": 83.7,
+"adjusted": 83.5,
+"ci_low": 78.9,
+"ci_high": 87.6
+},
+"checkup": {
+"crude": 81.6,
+"adjusted": 80.1,
+"ci_low": 78.6,
+"ci_high": 84.2
+},
+"bpmed": {
+"crude": 78.9,
+"adjusted": 60.4,
+"ci_low": 76.1,
+"ci_high": 81.4
+},
+"access2": {
+"crude": 5.0,
+"adjusted": 5.3,
+"ci_low": 3.8,
+"ci_high": 6.6
+},
+"diabetes": {
+"crude": 10.1,
+"adjusted": 8.7,
+"ci_low": 8.7,
+"ci_high": 11.4
+},
+"bphigh": {
+"crude": 31.3,
+"adjusted": 28.2,
+"ci_low": 28.3,
+"ci_high": 34.3
+},
+"depression": {
+"crude": 21.0,
+"adjusted": 21.6,
+"ci_low": 18.3,
+"ci_high": 23.7
+}
+}
+},
+{
+"county": "Clermont",
+"fips": "39025",
+"population": 211972,
+"adults": 165743,
+"indicators": {
+"colon_screen": {
+"crude": 68.9,
+"adjusted": 63.8,
+"ci_low": 64.3,
+"ci_high": 73.5
+},
+"mammouse": {
+"crude": 74.3,
+"adjusted": 73.9,
+"ci_low": 66.8,
+"ci_high": 80.9
+},
+"checkup": {
+"crude": 79.3,
+"adjusted": 77.0,
+"ci_low": 76.0,
+"ci_high": 82.4
+},
+"bpmed": {
+"crude": 78.5,
+"adjusted": 58.9,
+"ci_low": 75.7,
+"ci_high": 81.1
+},
+"access2": {
+"crude": 7.2,
+"adjusted": 7.5,
+"ci_low": 5.4,
+"ci_high": 9.4
+},
+"diabetes": {
+"crude": 12.6,
+"adjusted": 10.4,
+"ci_low": 10.8,
+"ci_high": 14.5
+},
+"bphigh": {
+"crude": 36.2,
+"adjusted": 31.7,
+"ci_low": 32.4,
+"ci_high": 39.9
+},
+"depression": {
+"crude": 25.7,
+"adjusted": 26.7,
+"ci_low": 22.2,
+"ci_high": 29.2
+}
+}
+},
+{
+"county": "Trumbull",
+"fips": "39155",
+"population": 200373,
+"adults": 159197,
+"indicators": {
+"colon_screen": {
+"crude": 61.3,
+"adjusted": 54.1,
+"ci_low": 56.8,
+"ci_high": 65.6
+},
+"mammouse": {
+"crude": 77.3,
+"adjusted": 76.7,
+"ci_low": 71.1,
+"ci_high": 82.6
+},
+"checkup": {
+"crude": 80.5,
+"adjusted": 77.4,
+"ci_low": 77.5,
+"ci_high": 83.3
+},
+"bpmed": {
+"crude": 81.5,
+"adjusted": 61.7,
+"ci_low": 79.0,
+"ci_high": 83.7
+},
+"access2": {
+"crude": 8.7,
+"adjusted": 9.1,
+"ci_low": 6.7,
+"ci_high": 11.1
+},
+"diabetes": {
+"crude": 15.5,
+"adjusted": 12.1,
+"ci_low": 13.5,
+"ci_high": 17.8
+},
+"bphigh": {
+"crude": 40.2,
+"adjusted": 33.8,
+"ci_low": 36.5,
+"ci_high": 43.9
+},
+"depression": {
+"crude": 25.6,
+"adjusted": 27.2,
+"ci_low": 22.5,
+"ci_high": 29.0
+}
+}
+},
+{
+"county": "Medina",
+"fips": "39103",
+"population": 184042,
+"adults": 145211,
+"indicators": {
+"colon_screen": {
+"crude": 68.4,
+"adjusted": 62.7,
+"ci_low": 63.9,
+"ci_high": 72.7
+},
+"mammouse": {
+"crude": 76.6,
+"adjusted": 76.4,
+"ci_low": 69.6,
+"ci_high": 82.8
+},
+"checkup": {
+"crude": 80.3,
+"adjusted": 77.4,
+"ci_low": 77.1,
+"ci_high": 83.3
+},
+"bpmed": {
+"crude": 80.3,
+"adjusted": 59.7,
+"ci_low": 77.5,
+"ci_high": 82.8
+},
+"access2": {
+"crude": 6.2,
+"adjusted": 6.7,
+"ci_low": 4.7,
+"ci_high": 8.1
+},
+"diabetes": {
+"crude": 11.9,
+"adjusted": 9.4,
+"ci_low": 10.1,
+"ci_high": 14.1
+},
+"bphigh": {
+"crude": 37.1,
+"adjusted": 31.3,
+"ci_low": 32.8,
+"ci_high": 41.4
+},
+"depression": {
+"crude": 23.9,
+"adjusted": 25.2,
+"ci_low": 20.3,
+"ci_high": 27.7
+}
+}
+},
+{
+"county": "Licking",
+"fips": "39089",
+"population": 183201,
+"adults": 141689,
+"indicators": {
+"colon_screen": {
+"crude": 64.2,
+"adjusted": 58.3,
+"ci_low": 59.4,
+"ci_high": 68.5
+},
+"mammouse": {
+"crude": 76.2,
+"adjusted": 76.0,
+"ci_low": 69.0,
+"ci_high": 82.3
+},
+"checkup": {
+"crude": 79.2,
+"adjusted": 77.2,
+"ci_low": 75.8,
+"ci_high": 82.3
+},
+"bpmed": {
+"crude": 78.7,
+"adjusted": 59.7,
+"ci_low": 75.8,
+"ci_high": 81.2
+},
+"access2": {
+"crude": 7.2,
+"adjusted": 7.5,
+"ci_low": 5.4,
+"ci_high": 9.2
+},
+"diabetes": {
+"crude": 12.9,
+"adjusted": 10.9,
+"ci_low": 11.1,
+"ci_high": 14.8
+},
+"bphigh": {
+"crude": 35.5,
+"adjusted": 31.6,
+"ci_low": 31.9,
+"ci_high": 39.3
+},
+"depression": {
+"crude": 25.8,
+"adjusted": 26.7,
+"ci_low": 22.5,
+"ci_high": 29.5
+}
+}
+},
+{
+"county": "Greene",
+"fips": "39057",
+"population": 169691,
+"adults": 135071,
+"indicators": {
+"colon_screen": {
+"crude": 69.3,
+"adjusted": 62.9,
+"ci_low": 65.0,
+"ci_high": 73.6
+},
+"mammouse": {
+"crude": 77.6,
+"adjusted": 76.7,
+"ci_low": 71.1,
+"ci_high": 83.5
+},
+"checkup": {
+"crude": 79.6,
+"adjusted": 78.0,
+"ci_low": 76.2,
+"ci_high": 82.7
+},
+"bpmed": {
+"crude": 79.1,
+"adjusted": 61.3,
+"ci_low": 76.6,
+"ci_high": 81.4
+},
+"access2": {
+"crude": 6.5,
+"adjusted": 6.7,
+"ci_low": 4.9,
+"ci_high": 8.4
+},
+"diabetes": {
+"crude": 11.2,
+"adjusted": 9.8,
+"ci_low": 9.6,
+"ci_high": 13.0
+},
+"bphigh": {
+"crude": 35.4,
+"adjusted": 32.2,
+"ci_low": 31.5,
+"ci_high": 39.3
+},
+"depression": {
+"crude": 24.2,
+"adjusted": 24.9,
+"ci_low": 20.7,
+"ci_high": 28.0
+}
+}
+},
+{
+"county": "Portage",
+"fips": "39133",
+"population": 162665,
+"adults": 133435,
+"indicators": {
+"colon_screen": {
+"crude": 64.3,
+"adjusted": 57.4,
+"ci_low": 59.9,
+"ci_high": 68.5
+},
+"mammouse": {
+"crude": 72.7,
+"adjusted": 72.9,
+"ci_low": 65.3,
+"ci_high": 79.2
+},
+"checkup": {
+"crude": 79.1,
+"adjusted": 77.6,
+"ci_low": 75.8,
+"ci_high": 82.1
+},
+"bpmed": {
+"crude": 78.9,
+"adjusted": 61.1,
+"ci_low": 76.4,
+"ci_high": 81.3
+},
+"access2": {
+"crude": 7.1,
+"adjusted": 7.5,
+"ci_low": 5.4,
+"ci_high": 9.3
+},
+"diabetes": {
+"crude": 11.8,
+"adjusted": 10.5,
+"ci_low": 10.2,
+"ci_high": 13.6
+},
+"bphigh": {
+"crude": 34.7,
+"adjusted": 32.3,
+"ci_low": 31.1,
+"ci_high": 38.2
+},
+"depression": {
+"crude": 24.6,
+"adjusted": 25.1,
+"ci_low": 21.2,
+"ci_high": 28.1
+}
+}
+},
+{
+"county": "Fairfield",
+"fips": "39045",
+"population": 165360,
+"adults": 125997,
+"indicators": {
+"colon_screen": {
+"crude": 65.5,
+"adjusted": 61.5,
+"ci_low": 60.7,
+"ci_high": 70.1
+},
+"mammouse": {
+"crude": 71.9,
+"adjusted": 70.7,
+"ci_low": 64.5,
+"ci_high": 78.6
+},
+"checkup": {
+"crude": 79.8,
+"adjusted": 78.0,
+"ci_low": 76.5,
+"ci_high": 82.8
+},
+"bpmed": {
+"crude": 77.7,
+"adjusted": 59.7,
+"ci_low": 75.0,
+"ci_high": 80.3
+},
+"access2": {
+"crude": 7.1,
+"adjusted": 7.4,
+"ci_low": 5.4,
+"ci_high": 9.1
+},
+"diabetes": {
+"crude": 12.2,
+"adjusted": 10.4,
+"ci_low": 10.5,
+"ci_high": 14.0
+},
+"bphigh": {
+"crude": 36.3,
+"adjusted": 32.7,
+"ci_low": 32.6,
+"ci_high": 40.3
+},
+"depression": {
+"crude": 25.3,
+"adjusted": 26.1,
+"ci_low": 21.9,
+"ci_high": 29.0
+}
+}
+},
+{
+"county": "Wood",
+"fips": "39173",
+"population": 132650,
+"adults": 106092,
+"indicators": {
+"colon_screen": {
+"crude": 64.6,
+"adjusted": 59.7,
+"ci_low": 60.2,
+"ci_high": 68.9
+},
+"mammouse": {
+"crude": 76.8,
+"adjusted": 76.2,
+"ci_low": 70.1,
+"ci_high": 82.4
+},
+"checkup": {
+"crude": 79.2,
+"adjusted": 78.6,
+"ci_low": 75.8,
+"ci_high": 82.1
+},
+"bpmed": {
+"crude": 77.4,
+"adjusted": 60.8,
+"ci_low": 74.8,
+"ci_high": 79.7
+},
+"access2": {
+"crude": 7.0,
+"adjusted": 7.4,
+"ci_low": 5.4,
+"ci_high": 9.0
+},
+"diabetes": {
+"crude": 10.7,
+"adjusted": 10.2,
+"ci_low": 9.2,
+"ci_high": 12.3
+},
+"bphigh": {
+"crude": 33.1,
+"adjusted": 32.3,
+"ci_low": 29.6,
+"ci_high": 36.5
+},
+"depression": {
+"crude": 27.6,
+"adjusted": 27.8,
+"ci_low": 24.2,
+"ci_high": 31.2
+}
+}
+},
+{
+"county": "Clark",
+"fips": "39023",
+"population": 134610,
+"adults": 104368,
+"indicators": {
+"colon_screen": {
+"crude": 61.5,
+"adjusted": 54.9,
+"ci_low": 56.7,
+"ci_high": 66.2
+},
+"mammouse": {
+"crude": 73.1,
+"adjusted": 72.6,
+"ci_low": 65.8,
+"ci_high": 79.7
+},
+"checkup": {
+"crude": 80.3,
+"adjusted": 77.6,
+"ci_low": 77.0,
+"ci_high": 83.2
+},
+"bpmed": {
+"crude": 80.4,
+"adjusted": 61.5,
+"ci_low": 77.9,
+"ci_high": 82.7
+},
+"access2": {
+"crude": 8.9,
+"adjusted": 9.4,
+"ci_low": 6.9,
+"ci_high": 11.1
+},
+"diabetes": {
+"crude": 15.0,
+"adjusted": 12.2,
+"ci_low": 13.0,
+"ci_high": 17.2
+},
+"bphigh": {
+"crude": 41.6,
+"adjusted": 36.1,
+"ci_low": 37.5,
+"ci_high": 45.7
+},
+"depression": {
+"crude": 26.7,
+"adjusted": 28.1,
+"ci_low": 23.2,
+"ci_high": 30.5
+}
+}
+},
+{
+"county": "Richland",
+"fips": "39139",
+"population": 125064,
+"adults": 97954,
+"indicators": {
+"colon_screen": {
+"crude": 61.9,
+"adjusted": 55.6,
+"ci_low": 57.5,
+"ci_high": 66.1
+},
+"mammouse": {
+"crude": 71.8,
+"adjusted": 69.3,
+"ci_low": 64.7,
+"ci_high": 78.1
+},
+"checkup": {
+"crude": 78.6,
+"adjusted": 76.2,
+"ci_low": 75.3,
+"ci_high": 81.6
+},
+"bpmed": {
+"crude": 79.5,
+"adjusted": 61.2,
+"ci_low": 77.0,
+"ci_high": 81.9
+},
+"access2": {
+"crude": 9.2,
+"adjusted": 9.5,
+"ci_low": 7.1,
+"ci_high": 11.5
+},
+"diabetes": {
+"crude": 14.5,
+"adjusted": 12.1,
+"ci_low": 12.6,
+"ci_high": 16.6
+},
+"bphigh": {
+"crude": 38.9,
+"adjusted": 34.3,
+"ci_low": 35.4,
+"ci_high": 42.8
+},
+"depression": {
+"crude": 26.2,
+"adjusted": 27.3,
+"ci_low": 22.9,
+"ci_high": 29.9
+}
+}
+},
+{
+"county": "Wayne",
+"fips": "39169",
+"population": 116510,
+"adults": 88780,
+"indicators": {
+"colon_screen": {
+"crude": 67.3,
+"adjusted": 60.2,
+"ci_low": 62.8,
+"ci_high": 71.5
+},
+"mammouse": {
+"crude": 73.0,
+"adjusted": 72.4,
+"ci_low": 65.1,
+"ci_high": 79.7
+},
+"checkup": {
+"crude": 78.6,
+"adjusted": 76.3,
+"ci_low": 75.0,
+"ci_high": 81.7
+},
+"bpmed": {
+"crude": 78.8,
+"adjusted": 59.3,
+"ci_low": 76.2,
+"ci_high": 81.1
+},
+"access2": {
+"crude": 8.5,
+"adjusted": 8.8,
+"ci_low": 6.2,
+"ci_high": 11.3
+},
+"diabetes": {
+"crude": 12.9,
+"adjusted": 10.8,
+"ci_low": 11.1,
+"ci_high": 15.0
+},
+"bphigh": {
+"crude": 37.1,
+"adjusted": 32.8,
+"ci_low": 33.1,
+"ci_high": 41.1
+},
+"depression": {
+"crude": 25.4,
+"adjusted": 26.5,
+"ci_low": 21.7,
+"ci_high": 29.3
+}
+}
+},
+{
+"county": "Miami",
+"fips": "39109",
+"population": 110876,
+"adults": 85630,
+"indicators": {
+"colon_screen": {
+"crude": 66.4,
+"adjusted": 61.0,
+"ci_low": 61.3,
+"ci_high": 71.3
+},
+"mammouse": {
+"crude": 71.1,
+"adjusted": 71.0,
+"ci_low": 62.6,
+"ci_high": 78.5
+},
+"checkup": {
+"crude": 79.2,
+"adjusted": 76.5,
+"ci_low": 75.7,
+"ci_high": 82.1
+},
+"bpmed": {
+"crude": 80.1,
+"adjusted": 60.3,
+"ci_low": 77.4,
+"ci_high": 82.4
+},
+"access2": {
+"crude": 7.2,
+"adjusted": 7.5,
+"ci_low": 5.5,
+"ci_high": 9.3
+},
+"diabetes": {
+"crude": 12.7,
+"adjusted": 10.3,
+"ci_low": 10.9,
+"ci_high": 14.6
+},
+"bphigh": {
+"crude": 37.2,
+"adjusted": 32.0,
+"ci_low": 33.1,
+"ci_high": 41.1
+},
+"depression": {
+"crude": 25.3,
+"adjusted": 26.6,
+"ci_low": 21.7,
+"ci_high": 29.0
+}
+}
+},
+{
+"county": "Columbiana",
+"fips": "39029",
+"population": 100182,
+"adults": 80055,
+"indicators": {
+"colon_screen": {
+"crude": 67.3,
+"adjusted": 61.1,
+"ci_low": 62.7,
+"ci_high": 71.6
+},
+"mammouse": {
+"crude": 73.1,
+"adjusted": 72.2,
+"ci_low": 65.6,
+"ci_high": 79.6
+},
+"checkup": {
+"crude": 79.4,
+"adjusted": 76.0,
+"ci_low": 75.9,
+"ci_high": 82.6
+},
+"bpmed": {
+"crude": 80.5,
+"adjusted": 60.3,
+"ci_low": 77.8,
+"ci_high": 83.0
+},
+"access2": {
+"crude": 8.6,
+"adjusted": 9.1,
+"ci_low": 6.7,
+"ci_high": 10.9
+},
+"diabetes": {
+"crude": 15.2,
+"adjusted": 11.8,
+"ci_low": 13.0,
+"ci_high": 17.4
+},
+"bphigh": {
+"crude": 42.1,
+"adjusted": 35.4,
+"ci_low": 37.8,
+"ci_high": 46.2
+},
+"depression": {
+"crude": 25.1,
+"adjusted": 26.7,
+"ci_low": 21.6,
+"ci_high": 28.7
+}
+}
+},
+{
+"county": "Allen",
+"fips": "39003",
+"population": 100838,
+"adults": 77234,
+"indicators": {
+"colon_screen": {
+"crude": 65.7,
+"adjusted": 59.3,
+"ci_low": 61.7,
+"ci_high": 69.6
+},
+"mammouse": {
+"crude": 72.9,
+"adjusted": 71.9,
+"ci_low": 66.2,
+"ci_high": 79.1
+},
+"checkup": {
+"crude": 81.3,
+"adjusted": 79.3,
+"ci_low": 78.2,
+"ci_high": 84.1
+},
+"bpmed": {
+"crude": 79.9,
+"adjusted": 61.7,
+"ci_low": 77.3,
+"ci_high": 82.3
+},
+"access2": {
+"crude": 8.3,
+"adjusted": 8.7,
+"ci_low": 6.7,
+"ci_high": 10.4
+},
+"diabetes": {
+"crude": 14.5,
+"adjusted": 12.2,
+"ci_low": 12.6,
+"ci_high": 16.4
+},
+"bphigh": {
+"crude": 38.7,
+"adjusted": 34.3,
+"ci_low": 35.1,
+"ci_high": 42.2
+},
+"depression": {
+"crude": 27.2,
+"adjusted": 28.2,
+"ci_low": 23.8,
+"ci_high": 30.7
+}
+}
+},
+{
+"county": "Ashtabula",
+"fips": "39007",
+"population": 96845,
+"adults": 75784,
+"indicators": {
+"colon_screen": {
+"crude": 57.1,
+"adjusted": 51.6,
+"ci_low": 52.1,
+"ci_high": 61.9
+},
+"mammouse": {
+"crude": 73.8,
+"adjusted": 74.0,
+"ci_low": 66.9,
+"ci_high": 80.0
+},
+"checkup": {
+"crude": 78.5,
+"adjusted": 75.5,
+"ci_low": 74.7,
+"ci_high": 81.8
+},
+"bpmed": {
+"crude": 80.7,
+"adjusted": 61.8,
+"ci_low": 78.1,
+"ci_high": 83.2
+},
+"access2": {
+"crude": 10.0,
+"adjusted": 10.6,
+"ci_low": 7.8,
+"ci_high": 12.6
+},
+"diabetes": {
+"crude": 16.2,
+"adjusted": 13.0,
+"ci_low": 14.0,
+"ci_high": 18.3
+},
+"bphigh": {
+"crude": 41.7,
+"adjusted": 35.9,
+"ci_low": 37.6,
+"ci_high": 45.7
+},
+"depression": {
+"crude": 27.7,
+"adjusted": 29.0,
+"ci_low": 24.0,
+"ci_high": 31.5
+}
+}
+},
+{
+"county": "Geauga",
+"fips": "39055",
+"population": 95407,
+"adults": 74443,
+"indicators": {
+"colon_screen": {
+"crude": 67.6,
+"adjusted": 60.2,
+"ci_low": 62.9,
+"ci_high": 71.9
+},
+"mammouse": {
+"crude": 80.0,
+"adjusted": 79.2,
+"ci_low": 73.2,
+"ci_high": 85.5
+},
+"checkup": {
+"crude": 80.9,
+"adjusted": 77.1,
+"ci_low": 77.5,
+"ci_high": 83.7
+},
+"bpmed": {
+"crude": 81.5,
+"adjusted": 59.3,
+"ci_low": 78.7,
+"ci_high": 83.8
+},
+"access2": {
+"crude": 6.4,
+"adjusted": 6.9,
+"ci_low": 4.6,
+"ci_high": 8.7
+},
+"diabetes": {
+"crude": 12.4,
+"adjusted": 9.3,
+"ci_low": 10.5,
+"ci_high": 14.3
+},
+"bphigh": {
+"crude": 37.5,
+"adjusted": 30.3,
+"ci_low": 33.3,
+"ci_high": 41.7
+},
+"depression": {
+"crude": 23.3,
+"adjusted": 25.1,
+"ci_low": 19.8,
+"ci_high": 26.6
+}
+}
+},
+{
+"county": "Tuscarawas",
+"fips": "39157",
+"population": 91874,
+"adults": 70742,
+"indicators": {
+"colon_screen": {
+"crude": 64.4,
+"adjusted": 57.7,
+"ci_low": 60.0,
+"ci_high": 68.7
+},
+"mammouse": {
+"crude": 74.7,
+"adjusted": 73.5,
+"ci_low": 68.0,
+"ci_high": 80.7
+},
+"checkup": {
+"crude": 79.7,
+"adjusted": 76.9,
+"ci_low": 76.2,
+"ci_high": 82.5
+},
+"bpmed": {
+"crude": 80.1,
+"adjusted": 60.3,
+"ci_low": 77.4,
+"ci_high": 82.6
+},
+"access2": {
+"crude": 9.1,
+"adjusted": 9.5,
+"ci_low": 7.0,
+"ci_high": 11.5
+},
+"diabetes": {
+"crude": 13.6,
+"adjusted": 11.0,
+"ci_low": 11.8,
+"ci_high": 15.7
+},
+"bphigh": {
+"crude": 39.9,
+"adjusted": 34.3,
+"ci_low": 36.0,
+"ci_high": 43.7
+},
+"depression": {
+"crude": 24.9,
+"adjusted": 26.2,
+"ci_low": 21.6,
+"ci_high": 28.5
+}
+}
+},
+{
+"county": "Muskingum",
+"fips": "39119",
+"population": 86305,
+"adults": 66808,
+"indicators": {
+"colon_screen": {
+"crude": 65.4,
+"adjusted": 59.4,
+"ci_low": 61.0,
+"ci_high": 69.2
+},
+"mammouse": {
+"crude": 74.9,
+"adjusted": 74.6,
+"ci_low": 67.6,
+"ci_high": 80.7
+},
+"checkup": {
+"crude": 81.4,
+"adjusted": 79.4,
+"ci_low": 78.6,
+"ci_high": 84.1
+},
+"bpmed": {
+"crude": 80.6,
+"adjusted": 62.5,
+"ci_low": 78.2,
+"ci_high": 82.8
+},
+"access2": {
+"crude": 8.2,
+"adjusted": 8.5,
+"ci_low": 6.2,
+"ci_high": 10.4
+},
+"diabetes": {
+"crude": 14.4,
+"adjusted": 12.0,
+"ci_low": 12.5,
+"ci_high": 16.5
+},
+"bphigh": {
+"crude": 39.9,
+"adjusted": 35.3,
+"ci_low": 36.4,
+"ci_high": 43.7
+},
+"depression": {
+"crude": 27.8,
+"adjusted": 29.0,
+"ci_low": 24.6,
+"ci_high": 31.4
+}
+}
+},
+{
+"county": "Ross",
+"fips": "39141",
+"population": 76501,
+"adults": 60465,
+"indicators": {
+"colon_screen": {
+"crude": 63.1,
+"adjusted": 58.5,
+"ci_low": 58.8,
+"ci_high": 67.4
+},
+"mammouse": {
+"crude": 71.3,
+"adjusted": 70.5,
+"ci_low": 64.3,
+"ci_high": 77.7
+},
+"checkup": {
+"crude": 78.0,
+"adjusted": 75.8,
+"ci_low": 74.7,
+"ci_high": 81.2
+},
+"bpmed": {
+"crude": 78.8,
+"adjusted": 61.0,
+"ci_low": 76.1,
+"ci_high": 81.4
+},
+"access2": {
+"crude": 9.3,
+"adjusted": 9.7,
+"ci_low": 7.1,
+"ci_high": 11.7
+},
+"diabetes": {
+"crude": 15.0,
+"adjusted": 12.6,
+"ci_low": 13.1,
+"ci_high": 17.1
+},
+"bphigh": {
+"crude": 40.7,
+"adjusted": 36.3,
+"ci_low": 37.2,
+"ci_high": 44.4
+},
+"depression": {
+"crude": 27.9,
+"adjusted": 28.8,
+"ci_low": 24.6,
+"ci_high": 31.4
+}
+}
+},
+{
+"county": "Erie",
+"fips": "39043",
+"population": 74035,
+"adults": 59711,
+"indicators": {
+"colon_screen": {
+"crude": 65.9,
+"adjusted": 58.0,
+"ci_low": 61.7,
+"ci_high": 70.1
+},
+"mammouse": {
+"crude": 80.4,
+"adjusted": 79.7,
+"ci_low": 74.5,
+"ci_high": 85.5
+},
+"checkup": {
+"crude": 82.0,
+"adjusted": 78.7,
+"ci_low": 79.1,
+"ci_high": 84.9
+},
+"bpmed": {
+"crude": 80.0,
+"adjusted": 58.8,
+"ci_low": 77.3,
+"ci_high": 82.4
+},
+"access2": {
+"crude": 7.7,
+"adjusted": 8.2,
+"ci_low": 6.0,
+"ci_high": 9.6
+},
+"diabetes": {
+"crude": 14.4,
+"adjusted": 11.0,
+"ci_low": 12.4,
+"ci_high": 16.5
+},
+"bphigh": {
+"crude": 41.6,
+"adjusted": 34.4,
+"ci_low": 37.6,
+"ci_high": 45.5
+},
+"depression": {
+"crude": 24.5,
+"adjusted": 26.2,
+"ci_low": 21.0,
+"ci_high": 28.0
+}
+}
+},
+{
+"county": "Hancock",
+"fips": "39063",
+"population": 74704,
+"adults": 58554,
+"indicators": {
+"colon_screen": {
+"crude": 63.5,
+"adjusted": 57.6,
+"ci_low": 59.2,
+"ci_high": 68.1
+},
+"mammouse": {
+"crude": 77.3,
+"adjusted": 76.6,
+"ci_low": 70.8,
+"ci_high": 83.3
+},
+"checkup": {
+"crude": 79.2,
+"adjusted": 77.3,
+"ci_low": 76.0,
+"ci_high": 82.2
+},
+"bpmed": {
+"crude": 80.0,
+"adjusted": 61.5,
+"ci_low": 77.5,
+"ci_high": 82.3
+},
+"access2": {
+"crude": 7.5,
+"adjusted": 7.8,
+"ci_low": 5.9,
+"ci_high": 9.6
+},
+"diabetes": {
+"crude": 12.5,
+"adjusted": 10.7,
+"ci_low": 10.8,
+"ci_high": 14.3
+},
+"bphigh": {
+"crude": 36.2,
+"adjusted": 32.4,
+"ci_low": 32.5,
+"ci_high": 39.9
+},
+"depression": {
+"crude": 25.1,
+"adjusted": 26.0,
+"ci_low": 21.7,
+"ci_high": 28.6
+}
+}
+},
+{
+"county": "Scioto",
+"fips": "39145",
+"population": 71969,
+"adults": 56470,
+"indicators": {
+"colon_screen": {
+"crude": 59.6,
+"adjusted": 54.4,
+"ci_low": 54.7,
+"ci_high": 64.2
+},
+"mammouse": {
+"crude": 70.1,
+"adjusted": 69.0,
+"ci_low": 62.7,
+"ci_high": 76.8
+},
+"checkup": {
+"crude": 80.9,
+"adjusted": 78.9,
+"ci_low": 77.8,
+"ci_high": 83.6
+},
+"bpmed": {
+"crude": 79.6,
+"adjusted": 62.5,
+"ci_low": 77.1,
+"ci_high": 81.9
+},
+"access2": {
+"crude": 9.5,
+"adjusted": 9.8,
+"ci_low": 7.3,
+"ci_high": 12.4
+},
+"diabetes": {
+"crude": 15.3,
+"adjusted": 12.9,
+"ci_low": 13.3,
+"ci_high": 17.5
+},
+"bphigh": {
+"crude": 43.6,
+"adjusted": 39.3,
+"ci_low": 39.9,
+"ci_high": 47.3
+},
+"depression": {
+"crude": 29.3,
+"adjusted": 30.4,
+"ci_low": 25.9,
+"ci_high": 33.1
+}
+}
+},
+{
+"county": "Athens",
+"fips": "39009",
+"population": 62706,
+"adults": 53669,
+"indicators": {
+"colon_screen": {
+"crude": 64.6,
+"adjusted": 58.7,
+"ci_low": 60.3,
+"ci_high": 68.6
+},
+"mammouse": {
+"crude": 74.4,
+"adjusted": 73.7,
+"ci_low": 67.8,
+"ci_high": 80.2
+},
+"checkup": {
+"crude": 76.4,
+"adjusted": 77.1,
+"ci_low": 73.0,
+"ci_high": 79.7
+},
+"bpmed": {
+"crude": 73.0,
+"adjusted": 59.7,
+"ci_low": 70.5,
+"ci_high": 75.2
+},
+"access2": {
+"crude": 7.8,
+"adjusted": 8.3,
+"ci_low": 5.9,
+"ci_high": 10.5
+},
+"diabetes": {
+"crude": 11.5,
+"adjusted": 12.6,
+"ci_low": 10.0,
+"ci_high": 13.2
+},
+"bphigh": {
+"crude": 33.4,
+"adjusted": 36.6,
+"ci_low": 30.3,
+"ci_high": 36.6
+},
+"depression": {
+"crude": 30.5,
+"adjusted": 30.0,
+"ci_low": 26.8,
+"ci_high": 34.3
+}
+}
+},
+{
+"county": "Union",
+"fips": "39159",
+"population": 69637,
+"adults": 53037,
+"indicators": {
+"colon_screen": {
+"crude": 62.0,
+"adjusted": 59.5,
+"ci_low": 57.2,
+"ci_high": 66.7
+},
+"mammouse": {
+"crude": 78.8,
+"adjusted": 78.9,
+"ci_low": 71.8,
+"ci_high": 84.7
+},
+"checkup": {
+"crude": 79.3,
+"adjusted": 78.5,
+"ci_low": 75.8,
+"ci_high": 82.5
+},
+"bpmed": {
+"crude": 76.6,
+"adjusted": 59.9,
+"ci_low": 73.4,
+"ci_high": 79.5
+},
+"access2": {
+"crude": 6.3,
+"adjusted": 6.5,
+"ci_low": 4.8,
+"ci_high": 8.0
+},
+"diabetes": {
+"crude": 10.2,
+"adjusted": 9.3,
+"ci_low": 8.7,
+"ci_high": 11.7
+},
+"bphigh": {
+"crude": 32.0,
+"adjusted": 30.2,
+"ci_low": 28.3,
+"ci_high": 35.7
+},
+"depression": {
+"crude": 24.2,
+"adjusted": 24.4,
+"ci_low": 20.7,
+"ci_high": 27.7
+}
+}
+},
+{
+"county": "Belmont",
+"fips": "39013",
+"population": 64918,
+"adults": 52858,
+"indicators": {
+"colon_screen": {
+"crude": 64.1,
+"adjusted": 57.4,
+"ci_low": 59.9,
+"ci_high": 68.2
+},
+"mammouse": {
+"crude": 74.0,
+"adjusted": 72.9,
+"ci_low": 67.7,
+"ci_high": 79.8
+},
+"checkup": {
+"crude": 80.0,
+"adjusted": 77.1,
+"ci_low": 77.0,
+"ci_high": 82.9
+},
+"bpmed": {
+"crude": 80.7,
+"adjusted": 61.8,
+"ci_low": 78.3,
+"ci_high": 83.0
+},
+"access2": {
+"crude": 8.2,
+"adjusted": 8.6,
+"ci_low": 6.4,
+"ci_high": 10.4
+},
+"diabetes": {
+"crude": 14.5,
+"adjusted": 11.5,
+"ci_low": 12.7,
+"ci_high": 16.5
+},
+"bphigh": {
+"crude": 41.4,
+"adjusted": 35.4,
+"ci_low": 37.7,
+"ci_high": 45.1
+},
+"depression": {
+"crude": 26.0,
+"adjusted": 27.3,
+"ci_low": 22.8,
+"ci_high": 29.4
+}
+}
+},
+{
+"county": "Jefferson",
+"fips": "39081",
+"population": 64026,
+"adults": 51564,
+"indicators": {
+"colon_screen": {
+"crude": 66.7,
+"adjusted": 59.5,
+"ci_low": 62.1,
+"ci_high": 71.0
+},
+"mammouse": {
+"crude": 72.7,
+"adjusted": 72.0,
+"ci_low": 65.5,
+"ci_high": 79.1
+},
+"checkup": {
+"crude": 80.3,
+"adjusted": 77.3,
+"ci_low": 77.0,
+"ci_high": 83.3
+},
+"bpmed": {
+"crude": 81.0,
+"adjusted": 61.4,
+"ci_low": 78.7,
+"ci_high": 83.2
+},
+"access2": {
+"crude": 8.0,
+"adjusted": 8.5,
+"ci_low": 6.3,
+"ci_high": 10.0
+},
+"diabetes": {
+"crude": 15.1,
+"adjusted": 12.0,
+"ci_low": 13.0,
+"ci_high": 17.2
+},
+"bphigh": {
+"crude": 41.9,
+"adjusted": 35.9,
+"ci_low": 38.1,
+"ci_high": 45.6
+},
+"depression": {
+"crude": 27.8,
+"adjusted": 29.4,
+"ci_low": 24.1,
+"ci_high": 31.5
+}
+}
+},
+{
+"county": "Marion",
+"fips": "39101",
+"population": 64851,
+"adults": 50931,
+"indicators": {
+"colon_screen": {
+"crude": 62.2,
+"adjusted": 56.6,
+"ci_low": 57.8,
+"ci_high": 66.5
+},
+"mammouse": {
+"crude": 73.7,
+"adjusted": 73.0,
+"ci_low": 66.7,
+"ci_high": 79.8
+},
+"checkup": {
+"crude": 79.1,
+"adjusted": 77.0,
+"ci_low": 75.8,
+"ci_high": 82.3
+},
+"bpmed": {
+"crude": 78.8,
+"adjusted": 61.3,
+"ci_low": 76.2,
+"ci_high": 81.3
+},
+"access2": {
+"crude": 9.5,
+"adjusted": 9.8,
+"ci_low": 7.4,
+"ci_high": 12.1
+},
+"diabetes": {
+"crude": 14.8,
+"adjusted": 12.5,
+"ci_low": 12.8,
+"ci_high": 16.9
+},
+"bphigh": {
+"crude": 41.3,
+"adjusted": 37.0,
+"ci_low": 37.3,
+"ci_high": 45.2
+},
+"depression": {
+"crude": 27.3,
+"adjusted": 28.2,
+"ci_low": 23.7,
+"ci_high": 31.1
+}
+}
+},
+{
+"county": "Knox",
+"fips": "39083",
+"population": 63320,
+"adults": 48925,
+"indicators": {
+"colon_screen": {
+"crude": 65.9,
+"adjusted": 58.6,
+"ci_low": 61.6,
+"ci_high": 70.3
+},
+"mammouse": {
+"crude": 72.3,
+"adjusted": 72.7,
+"ci_low": 65.3,
+"ci_high": 79.1
+},
+"checkup": {
+"crude": 78.2,
+"adjusted": 75.7,
+"ci_low": 74.5,
+"ci_high": 81.4
+},
+"bpmed": {
+"crude": 80.0,
+"adjusted": 60.7,
+"ci_low": 77.4,
+"ci_high": 82.3
+},
+"access2": {
+"crude": 7.6,
+"adjusted": 8.1,
+"ci_low": 5.8,
+"ci_high": 9.8
+},
+"diabetes": {
+"crude": 12.6,
+"adjusted": 10.5,
+"ci_low": 10.9,
+"ci_high": 14.6
+},
+"bphigh": {
+"crude": 37.5,
+"adjusted": 33.1,
+"ci_low": 33.8,
+"ci_high": 41.4
+},
+"depression": {
+"crude": 25.7,
+"adjusted": 26.8,
+"ci_low": 22.2,
+"ci_high": 29.4
+}
+}
+},
+{
+"county": "Pickaway",
+"fips": "39129",
+"population": 61086,
+"adults": 47959,
+"indicators": {
+"colon_screen": {
+"crude": 62.5,
+"adjusted": 58.8,
+"ci_low": 57.2,
+"ci_high": 67.5
+},
+"mammouse": {
+"crude": 70.2,
+"adjusted": 70.0,
+"ci_low": 61.8,
+"ci_high": 77.6
+},
+"checkup": {
+"crude": 78.5,
+"adjusted": 77.1,
+"ci_low": 74.9,
+"ci_high": 81.9
+},
+"bpmed": {
+"crude": 77.0,
+"adjusted": 60.3,
+"ci_low": 74.1,
+"ci_high": 79.7
+},
+"access2": {
+"crude": 8.5,
+"adjusted": 8.8,
+"ci_low": 6.5,
+"ci_high": 11.2
+},
+"diabetes": {
+"crude": 12.6,
+"adjusted": 11.1,
+"ci_low": 10.7,
+"ci_high": 14.5
+},
+"bphigh": {
+"crude": 38.7,
+"adjusted": 35.8,
+"ci_low": 34.4,
+"ci_high": 42.9
+},
+"depression": {
+"crude": 26.9,
+"adjusted": 27.4,
+"ci_low": 23.3,
+"ci_high": 30.7
+}
+}
+},
+{
+"county": "Washington",
+"fips": "39167",
+"population": 58577,
+"adults": 47177,
+"indicators": {
+"colon_screen": {
+"crude": 64.1,
+"adjusted": 56.8,
+"ci_low": 59.8,
+"ci_high": 68.4
+},
+"mammouse": {
+"crude": 73.7,
+"adjusted": 73.3,
+"ci_low": 66.6,
+"ci_high": 79.8
+},
+"checkup": {
+"crude": 80.9,
+"adjusted": 77.9,
+"ci_low": 78.0,
+"ci_high": 83.7
+},
+"bpmed": {
+"crude": 80.4,
+"adjusted": 59.9,
+"ci_low": 77.9,
+"ci_high": 82.7
+},
+"access2": {
+"crude": 7.7,
+"adjusted": 8.2,
+"ci_low": 5.9,
+"ci_high": 10.0
+},
+"diabetes": {
+"crude": 13.8,
+"adjusted": 10.8,
+"ci_low": 11.9,
+"ci_high": 15.7
+},
+"bphigh": {
+"crude": 41.2,
+"adjusted": 34.8,
+"ci_low": 37.5,
+"ci_high": 44.7
+},
+"depression": {
+"crude": 25.8,
+"adjusted": 27.5,
+"ci_low": 22.4,
+"ci_high": 29.3
+}
+}
+},
+{
+"county": "Sandusky",
+"fips": "39143",
+"population": 58709,
+"adults": 46050,
+"indicators": {
+"colon_screen": {
+"crude": 62.6,
+"adjusted": 56.4,
+"ci_low": 57.6,
+"ci_high": 67.4
+},
+"mammouse": {
+"crude": 75.2,
+"adjusted": 74.7,
+"ci_low": 67.8,
+"ci_high": 81.7
+},
+"checkup": {
+"crude": 80.1,
+"adjusted": 77.4,
+"ci_low": 76.7,
+"ci_high": 83.2
+},
+"bpmed": {
+"crude": 80.5,
+"adjusted": 61.0,
+"ci_low": 77.9,
+"ci_high": 82.9
+},
+"access2": {
+"crude": 9.2,
+"adjusted": 9.7,
+"ci_low": 7.3,
+"ci_high": 11.3
+},
+"diabetes": {
+"crude": 14.4,
+"adjusted": 11.6,
+"ci_low": 12.5,
+"ci_high": 16.4
+},
+"bphigh": {
+"crude": 39.7,
+"adjusted": 34.1,
+"ci_low": 35.7,
+"ci_high": 43.8
+},
+"depression": {
+"crude": 25.0,
+"adjusted": 26.2,
+"ci_low": 21.5,
+"ci_high": 28.9
+}
+}
+},
+{
+"county": "Huron",
+"fips": "39077",
+"population": 58199,
+"adults": 44611,
+"indicators": {
+"colon_screen": {
+"crude": 64.0,
+"adjusted": 58.6,
+"ci_low": 58.7,
+"ci_high": 68.7
+},
+"mammouse": {
+"crude": 74.2,
+"adjusted": 73.5,
+"ci_low": 66.5,
+"ci_high": 80.5
+},
+"checkup": {
+"crude": 79.7,
+"adjusted": 77.3,
+"ci_low": 76.2,
+"ci_high": 82.7
+},
+"bpmed": {
+"crude": 79.8,
+"adjusted": 60.4,
+"ci_low": 77.1,
+"ci_high": 82.3
+},
+"access2": {
+"crude": 9.0,
+"adjusted": 9.5,
+"ci_low": 7.1,
+"ci_high": 11.3
+},
+"diabetes": {
+"crude": 13.5,
+"adjusted": 11.1,
+"ci_low": 11.7,
+"ci_high": 15.5
+},
+"bphigh": {
+"crude": 37.7,
+"adjusted": 32.9,
+"ci_low": 33.8,
+"ci_high": 41.8
+},
+"depression": {
+"crude": 25.7,
+"adjusted": 26.8,
+"ci_low": 22.3,
+"ci_high": 29.7
+}
+}
+},
+{
+"county": "Lawrence",
+"fips": "39087",
+"population": 56118,
+"adults": 44136,
+"indicators": {
+"colon_screen": {
+"crude": 59.9,
+"adjusted": 54.8,
+"ci_low": 54.9,
+"ci_high": 64.6
+},
+"mammouse": {
+"crude": 70.0,
+"adjusted": 69.4,
+"ci_low": 62.8,
+"ci_high": 76.9
+},
+"checkup": {
+"crude": 80.3,
+"adjusted": 77.7,
+"ci_low": 77.0,
+"ci_high": 83.2
+},
+"bpmed": {
+"crude": 80.4,
+"adjusted": 61.7,
+"ci_low": 77.6,
+"ci_high": 82.8
+},
+"access2": {
+"crude": 8.6,
+"adjusted": 9.1,
+"ci_low": 6.5,
+"ci_high": 11.2
+},
+"diabetes": {
+"crude": 15.1,
+"adjusted": 12.2,
+"ci_low": 13.0,
+"ci_high": 17.2
+},
+"bphigh": {
+"crude": 42.9,
+"adjusted": 37.3,
+"ci_low": 39.1,
+"ci_high": 46.6
+},
+"depression": {
+"crude": 27.4,
+"adjusted": 28.8,
+"ci_low": 23.8,
+"ci_high": 31.0
+}
+}
+},
+{
+"county": "Seneca",
+"fips": "39147",
+"population": 54527,
+"adults": 42948,
+"indicators": {
+"colon_screen": {
+"crude": 64.1,
+"adjusted": 58.1,
+"ci_low": 59.5,
+"ci_high": 68.7
+},
+"mammouse": {
+"crude": 72.6,
+"adjusted": 71.7,
+"ci_low": 65.0,
+"ci_high": 79.2
+},
+"checkup": {
+"crude": 78.5,
+"adjusted": 76.3,
+"ci_low": 74.8,
+"ci_high": 81.8
+},
+"bpmed": {
+"crude": 79.7,
+"adjusted": 60.6,
+"ci_low": 76.9,
+"ci_high": 82.2
+},
+"access2": {
+"crude": 8.2,
+"adjusted": 8.6,
+"ci_low": 6.4,
+"ci_high": 10.5
+},
+"diabetes": {
+"crude": 13.2,
+"adjusted": 11.1,
+"ci_low": 11.3,
+"ci_high": 15.3
+},
+"bphigh": {
+"crude": 36.0,
+"adjusted": 32.0,
+"ci_low": 32.1,
+"ci_high": 40.0
+},
+"depression": {
+"crude": 25.4,
+"adjusted": 26.4,
+"ci_low": 21.8,
+"ci_high": 29.2
+}
+}
+},
+{
+"county": "Ashland",
+"fips": "39005",
+"population": 52190,
+"adults": 40545,
+"indicators": {
+"colon_screen": {
+"crude": 65.6,
+"adjusted": 59.1,
+"ci_low": 60.7,
+"ci_high": 70.3
+},
+"mammouse": {
+"crude": 75.8,
+"adjusted": 75.0,
+"ci_low": 68.7,
+"ci_high": 82.0
+},
+"checkup": {
+"crude": 79.8,
+"adjusted": 77.0,
+"ci_low": 76.2,
+"ci_high": 82.8
+},
+"bpmed": {
+"crude": 79.8,
+"adjusted": 60.1,
+"ci_low": 77.1,
+"ci_high": 82.2
+},
+"access2": {
+"crude": 8.2,
+"adjusted": 8.6,
+"ci_low": 6.2,
+"ci_high": 10.5
+},
+"diabetes": {
+"crude": 13.9,
+"adjusted": 11.2,
+"ci_low": 11.8,
+"ci_high": 16.0
+},
+"bphigh": {
+"crude": 40.4,
+"adjusted": 34.9,
+"ci_low": 36.0,
+"ci_high": 44.7
+},
+"depression": {
+"crude": 26.0,
+"adjusted": 27.4,
+"ci_low": 22.3,
+"ci_high": 29.9
+}
+}
+},
+{
+"county": "Darke",
+"fips": "39037",
+"population": 51415,
+"adults": 39329,
+"indicators": {
+"colon_screen": {
+"crude": 61.6,
+"adjusted": 55.1,
+"ci_low": 56.7,
+"ci_high": 66.5
+},
+"mammouse": {
+"crude": 76.4,
+"adjusted": 76.2,
+"ci_low": 69.1,
+"ci_high": 82.6
+},
+"checkup": {
+"crude": 79.8,
+"adjusted": 76.7,
+"ci_low": 76.2,
+"ci_high": 83.0
+},
+"bpmed": {
+"crude": 80.8,
+"adjusted": 60.6,
+"ci_low": 78.2,
+"ci_high": 83.2
+},
+"access2": {
+"crude": 8.3,
+"adjusted": 8.8,
+"ci_low": 6.3,
+"ci_high": 10.6
+},
+"diabetes": {
+"crude": 14.3,
+"adjusted": 11.3,
+"ci_low": 12.3,
+"ci_high": 16.4
+},
+"bphigh": {
+"crude": 39.7,
+"adjusted": 33.6,
+"ci_low": 35.3,
+"ci_high": 44.0
+},
+"depression": {
+"crude": 26.6,
+"adjusted": 28.2,
+"ci_low": 22.8,
+"ci_high": 30.5
+}
+}
+},
+{
+"county": "Shelby",
+"fips": "39149",
+"population": 47765,
+"adults": 36087,
+"indicators": {
+"colon_screen": {
+"crude": 63.5,
+"adjusted": 57.9,
+"ci_low": 58.6,
+"ci_high": 68.4
+},
+"mammouse": {
+"crude": 74.7,
+"adjusted": 73.9,
+"ci_low": 67.3,
+"ci_high": 81.6
+},
+"checkup": {
+"crude": 78.7,
+"adjusted": 76.3,
+"ci_low": 75.1,
+"ci_high": 81.9
+},
+"bpmed": {
+"crude": 79.5,
+"adjusted": 60.2,
+"ci_low": 76.9,
+"ci_high": 81.9
+},
+"access2": {
+"crude": 8.0,
+"adjusted": 8.4,
+"ci_low": 6.1,
+"ci_high": 10.3
+},
+"diabetes": {
+"crude": 13.3,
+"adjusted": 10.9,
+"ci_low": 11.4,
+"ci_high": 15.3
+},
+"bphigh": {
+"crude": 38.2,
+"adjusted": 33.5,
+"ci_low": 34.1,
+"ci_high": 42.5
+},
+"depression": {
+"crude": 25.6,
+"adjusted": 26.7,
+"ci_low": 22.2,
+"ci_high": 29.3
+}
+}
+},
+{
+"county": "Madison",
+"fips": "39097",
+"population": 44602,
+"adults": 35840,
+"indicators": {
+"colon_screen": {
+"crude": 63.1,
+"adjusted": 59.7,
+"ci_low": 58.2,
+"ci_high": 68.6
+},
+"mammouse": {
+"crude": 70.8,
+"adjusted": 70.8,
+"ci_low": 63.1,
+"ci_high": 78.6
+},
+"checkup": {
+"crude": 78.8,
+"adjusted": 77.2,
+"ci_low": 75.1,
+"ci_high": 82.3
+},
+"bpmed": {
+"crude": 77.6,
+"adjusted": 60.7,
+"ci_low": 74.7,
+"ci_high": 80.3
+},
+"access2": {
+"crude": 8.4,
+"adjusted": 8.7,
+"ci_low": 6.3,
+"ci_high": 10.9
+},
+"diabetes": {
+"crude": 12.4,
+"adjusted": 10.8,
+"ci_low": 10.6,
+"ci_high": 14.2
+},
+"bphigh": {
+"crude": 37.5,
+"adjusted": 34.3,
+"ci_low": 33.2,
+"ci_high": 41.9
+},
+"depression": {
+"crude": 24.7,
+"adjusted": 25.2,
+"ci_low": 21.2,
+"ci_high": 28.8
+}
+}
+},
+{
+"county": "Logan",
+"fips": "39091",
+"population": 46057,
+"adults": 35588,
+"indicators": {
+"colon_screen": {
+"crude": 66.0,
+"adjusted": 59.6,
+"ci_low": 60.9,
+"ci_high": 70.7
+},
+"mammouse": {
+"crude": 74.1,
+"adjusted": 73.0,
+"ci_low": 66.5,
+"ci_high": 80.9
+},
+"checkup": {
+"crude": 79.6,
+"adjusted": 76.8,
+"ci_low": 76.0,
+"ci_high": 82.8
+},
+"bpmed": {
+"crude": 80.3,
+"adjusted": 60.4,
+"ci_low": 77.6,
+"ci_high": 82.7
+},
+"access2": {
+"crude": 7.8,
+"adjusted": 8.3,
+"ci_low": 6.0,
+"ci_high": 9.9
+},
+"diabetes": {
+"crude": 14.0,
+"adjusted": 11.1,
+"ci_low": 11.9,
+"ci_high": 16.1
+},
+"bphigh": {
+"crude": 39.0,
+"adjusted": 33.3,
+"ci_low": 34.7,
+"ci_high": 43.1
+},
+"depression": {
+"crude": 25.4,
+"adjusted": 26.7,
+"ci_low": 21.7,
+"ci_high": 29.1
+}
+}
+},
+{
+"county": "Auglaize",
+"fips": "39011",
+"population": 46050,
+"adults": 35144,
+"indicators": {
+"colon_screen": {
+"crude": 69.1,
+"adjusted": 62.5,
+"ci_low": 64.8,
+"ci_high": 73.2
+},
+"mammouse": {
+"crude": 73.6,
+"adjusted": 72.9,
+"ci_low": 66.1,
+"ci_high": 80.2
+},
+"checkup": {
+"crude": 79.7,
+"adjusted": 77.0,
+"ci_low": 76.4,
+"ci_high": 82.8
+},
+"bpmed": {
+"crude": 80.0,
+"adjusted": 59.8,
+"ci_low": 77.3,
+"ci_high": 82.4
+},
+"access2": {
+"crude": 7.2,
+"adjusted": 7.5,
+"ci_low": 5.5,
+"ci_high": 9.3
+},
+"diabetes": {
+"crude": 12.2,
+"adjusted": 9.8,
+"ci_low": 10.5,
+"ci_high": 14.1
+},
+"bphigh": {
+"crude": 37.6,
+"adjusted": 32.2,
+"ci_low": 33.6,
+"ci_high": 41.6
+},
+"depression": {
+"crude": 24.8,
+"adjusted": 26.1,
+"ci_low": 21.3,
+"ci_high": 28.3
+}
+}
+},
+{
+"county": "Brown",
+"fips": "39015",
+"population": 43777,
+"adults": 33846,
+"indicators": {
+"colon_screen": {
+"crude": 65.6,
+"adjusted": 60.1,
+"ci_low": 60.8,
+"ci_high": 70.2
+},
+"mammouse": {
+"crude": 75.0,
+"adjusted": 74.0,
+"ci_low": 67.8,
+"ci_high": 81.2
+},
+"checkup": {
+"crude": 80.4,
+"adjusted": 77.7,
+"ci_low": 77.2,
+"ci_high": 83.3
+},
+"bpmed": {
+"crude": 80.6,
+"adjusted": 61.4,
+"ci_low": 78.1,
+"ci_high": 82.9
+},
+"access2": {
+"crude": 8.7,
+"adjusted": 9.1,
+"ci_low": 6.6,
+"ci_high": 11.0
+},
+"diabetes": {
+"crude": 14.5,
+"adjusted": 11.6,
+"ci_low": 12.5,
+"ci_high": 16.7
+},
+"bphigh": {
+"crude": 42.2,
+"adjusted": 36.3,
+"ci_low": 38.4,
+"ci_high": 46.4
+},
+"depression": {
+"crude": 27.3,
+"adjusted": 28.7,
+"ci_low": 23.8,
+"ci_high": 31.1
+}
+}
+},
+{
+"county": "Highland",
+"fips": "39071",
+"population": 43614,
+"adults": 33239,
+"indicators": {
+"colon_screen": {
+"crude": 63.2,
+"adjusted": 57.3,
+"ci_low": 59.1,
+"ci_high": 67.2
+},
+"mammouse": {
+"crude": 75.4,
+"adjusted": 75.0,
+"ci_low": 69.3,
+"ci_high": 80.7
+},
+"checkup": {
+"crude": 78.5,
+"adjusted": 75.7,
+"ci_low": 75.0,
+"ci_high": 81.7
+},
+"bpmed": {
+"crude": 80.1,
+"adjusted": 60.6,
+"ci_low": 77.4,
+"ci_high": 82.5
+},
+"access2": {
+"crude": 9.0,
+"adjusted": 9.4,
+"ci_low": 6.7,
+"ci_high": 11.6
+},
+"diabetes": {
+"crude": 14.7,
+"adjusted": 11.8,
+"ci_low": 12.8,
+"ci_high": 16.7
+},
+"bphigh": {
+"crude": 40.1,
+"adjusted": 34.7,
+"ci_low": 36.3,
+"ci_high": 43.9
+},
+"depression": {
+"crude": 27.4,
+"adjusted": 28.7,
+"ci_low": 24.0,
+"ci_high": 31.0
+}
+}
+},
+{
+"county": "Ottawa",
+"fips": "39123",
+"population": 39803,
+"adults": 32975,
+"indicators": {
+"colon_screen": {
+"crude": 69.4,
+"adjusted": 60.5,
+"ci_low": 64.6,
+"ci_high": 73.8
+},
+"mammouse": {
+"crude": 76.6,
+"adjusted": 75.7,
+"ci_low": 69.5,
+"ci_high": 83.0
+},
+"checkup": {
+"crude": 81.2,
+"adjusted": 76.2,
+"ci_low": 77.9,
+"ci_high": 84.1
+},
+"bpmed": {
+"crude": 82.8,
+"adjusted": 59.4,
+"ci_low": 80.3,
+"ci_high": 85.2
+},
+"access2": {
+"crude": 7.0,
+"adjusted": 7.8,
+"ci_low": 5.4,
+"ci_high": 9.0
+},
+"diabetes": {
+"crude": 13.8,
+"adjusted": 9.6,
+"ci_low": 11.7,
+"ci_high": 16.0
+},
+"bphigh": {
+"crude": 41.9,
+"adjusted": 32.2,
+"ci_low": 37.8,
+"ci_high": 46.4
+},
+"depression": {
+"crude": 23.6,
+"adjusted": 25.9,
+"ci_low": 20.2,
+"ci_high": 27.3
+}
+}
+},
+{
+"county": "Crawford",
+"fips": "39033",
+"population": 41529,
+"adults": 32618,
+"indicators": {
+"colon_screen": {
+"crude": 64.5,
+"adjusted": 57.7,
+"ci_low": 59.5,
+"ci_high": 68.9
+},
+"mammouse": {
+"crude": 66.8,
+"adjusted": 65.8,
+"ci_low": 58.1,
+"ci_high": 74.5
+},
+"checkup": {
+"crude": 79.1,
+"adjusted": 76.0,
+"ci_low": 75.6,
+"ci_high": 82.4
+},
+"bpmed": {
+"crude": 81.0,
+"adjusted": 61.0,
+"ci_low": 78.5,
+"ci_high": 83.5
+},
+"access2": {
+"crude": 8.7,
+"adjusted": 9.1,
+"ci_low": 6.6,
+"ci_high": 11.1
+},
+"diabetes": {
+"crude": 14.6,
+"adjusted": 11.5,
+"ci_low": 12.6,
+"ci_high": 16.7
+},
+"bphigh": {
+"crude": 40.0,
+"adjusted": 33.9,
+"ci_low": 35.9,
+"ci_high": 44.0
+},
+"depression": {
+"crude": 26.9,
+"adjusted": 28.5,
+"ci_low": 23.2,
+"ci_high": 30.7
+}
+}
+},
+{
+"county": "Clinton",
+"fips": "39027",
+"population": 41938,
+"adults": 32506,
+"indicators": {
+"colon_screen": {
+"crude": 66.0,
+"adjusted": 60.8,
+"ci_low": 60.7,
+"ci_high": 70.9
+},
+"mammouse": {
+"crude": 74.4,
+"adjusted": 73.9,
+"ci_low": 66.4,
+"ci_high": 81.2
+},
+"checkup": {
+"crude": 79.4,
+"adjusted": 77.1,
+"ci_low": 76.0,
+"ci_high": 82.7
+},
+"bpmed": {
+"crude": 79.9,
+"adjusted": 60.8,
+"ci_low": 77.1,
+"ci_high": 82.4
+},
+"access2": {
+"crude": 8.1,
+"adjusted": 8.6,
+"ci_low": 6.2,
+"ci_high": 10.5
+},
+"diabetes": {
+"crude": 13.5,
+"adjusted": 11.2,
+"ci_low": 11.5,
+"ci_high": 15.6
+},
+"bphigh": {
+"crude": 38.1,
+"adjusted": 33.5,
+"ci_low": 33.8,
+"ci_high": 42.5
+},
+"depression": {
+"crude": 26.2,
+"adjusted": 27.4,
+"ci_low": 22.4,
+"ci_high": 30.2
+}
+}
+},
+{
+"county": "Fulton",
+"fips": "39051",
+"population": 42007,
+"adults": 32339,
+"indicators": {
+"colon_screen": {
+"crude": 66.8,
+"adjusted": 60.9,
+"ci_low": 61.5,
+"ci_high": 71.8
+},
+"mammouse": {
+"crude": 74.9,
+"adjusted": 74.3,
+"ci_low": 66.7,
+"ci_high": 81.8
+},
+"checkup": {
+"crude": 79.5,
+"adjusted": 76.7,
+"ci_low": 76.1,
+"ci_high": 82.7
+},
+"bpmed": {
+"crude": 80.5,
+"adjusted": 60.5,
+"ci_low": 77.9,
+"ci_high": 82.9
+},
+"access2": {
+"crude": 8.5,
+"adjusted": 9.0,
+"ci_low": 6.7,
+"ci_high": 10.4
+},
+"diabetes": {
+"crude": 13.3,
+"adjusted": 10.7,
+"ci_low": 11.4,
+"ci_high": 15.4
+},
+"bphigh": {
+"crude": 37.8,
+"adjusted": 32.3,
+"ci_low": 33.7,
+"ci_high": 42.1
+},
+"depression": {
+"crude": 24.7,
+"adjusted": 25.9,
+"ci_low": 21.1,
+"ci_high": 28.4
+}
+}
+},
+{
+"county": "Preble",
+"fips": "39135",
+"population": 40556,
+"adults": 31595,
+"indicators": {
+"colon_screen": {
+"crude": 67.0,
+"adjusted": 61.3,
+"ci_low": 61.5,
+"ci_high": 72.1
+},
+"mammouse": {
+"crude": 74.6,
+"adjusted": 73.7,
+"ci_low": 65.9,
+"ci_high": 81.8
+},
+"checkup": {
+"crude": 79.5,
+"adjusted": 76.4,
+"ci_low": 75.9,
+"ci_high": 82.7
+},
+"bpmed": {
+"crude": 80.6,
+"adjusted": 60.1,
+"ci_low": 77.8,
+"ci_high": 82.9
+},
+"access2": {
+"crude": 7.5,
+"adjusted": 8.0,
+"ci_low": 5.7,
+"ci_high": 9.7
+},
+"diabetes": {
+"crude": 13.4,
+"adjusted": 10.5,
+"ci_low": 11.5,
+"ci_high": 15.4
+},
+"bphigh": {
+"crude": 39.0,
+"adjusted": 32.9,
+"ci_low": 34.6,
+"ci_high": 43.1
+},
+"depression": {
+"crude": 26.0,
+"adjusted": 27.5,
+"ci_low": 22.3,
+"ci_high": 29.7
+}
+}
+},
+{
+"county": "Mercer",
+"fips": "39107",
+"population": 42439,
+"adults": 31313,
+"indicators": {
+"colon_screen": {
+"crude": 66.5,
+"adjusted": 60.5,
+"ci_low": 61.8,
+"ci_high": 71.1
+},
+"mammouse": {
+"crude": 77.2,
+"adjusted": 77.3,
+"ci_low": 70.7,
+"ci_high": 83.1
+},
+"checkup": {
+"crude": 79.0,
+"adjusted": 76.2,
+"ci_low": 75.7,
+"ci_high": 82.1
+},
+"bpmed": {
+"crude": 79.6,
+"adjusted": 59.3,
+"ci_low": 77.0,
+"ci_high": 82.1
+},
+"access2": {
+"crude": 7.2,
+"adjusted": 7.6,
+"ci_low": 5.5,
+"ci_high": 9.2
+},
+"diabetes": {
+"crude": 12.1,
+"adjusted": 9.7,
+"ci_low": 10.4,
+"ci_high": 14.0
+},
+"bphigh": {
+"crude": 37.8,
+"adjusted": 32.4,
+"ci_low": 33.8,
+"ci_high": 42.0
+},
+"depression": {
+"crude": 24.9,
+"adjusted": 26.1,
+"ci_low": 21.5,
+"ci_high": 28.7
+}
+}
+},
+{
+"county": "Holmes",
+"fips": "39075",
+"population": 44386,
+"adults": 31037,
+"indicators": {
+"colon_screen": {
+"crude": 57.7,
+"adjusted": 53.0,
+"ci_low": 52.4,
+"ci_high": 63.0
+},
+"mammouse": {
+"crude": 69.5,
+"adjusted": 69.2,
+"ci_low": 60.5,
+"ci_high": 77.6
+},
+"checkup": {
+"crude": 75.1,
+"adjusted": 74.1,
+"ci_low": 70.8,
+"ci_high": 79.0
+},
+"bpmed": {
+"crude": 76.6,
+"adjusted": 59.3,
+"ci_low": 73.7,
+"ci_high": 79.2
+},
+"access2": {
+"crude": 12.3,
+"adjusted": 12.6,
+"ci_low": 9.3,
+"ci_high": 15.8
+},
+"diabetes": {
+"crude": 12.7,
+"adjusted": 11.7,
+"ci_low": 11.0,
+"ci_high": 14.6
+},
+"bphigh": {
+"crude": 35.3,
+"adjusted": 33.5,
+"ci_low": 31.3,
+"ci_high": 39.5
+},
+"depression": {
+"crude": 29.3,
+"adjusted": 29.8,
+"ci_low": 25.1,
+"ci_high": 33.6
+}
+}
+},
+{
+"county": "Champaign",
+"fips": "39021",
+"population": 38845,
+"adults": 30357,
+"indicators": {
+"colon_screen": {
+"crude": 65.9,
+"adjusted": 60.4,
+"ci_low": 60.5,
+"ci_high": 70.9
+},
+"mammouse": {
+"crude": 76.5,
+"adjusted": 76.4,
+"ci_low": 69.0,
+"ci_high": 83.0
+},
+"checkup": {
+"crude": 79.4,
+"adjusted": 76.7,
+"ci_low": 75.8,
+"ci_high": 82.6
+},
+"bpmed": {
+"crude": 79.9,
+"adjusted": 60.0,
+"ci_low": 77.2,
+"ci_high": 82.3
+},
+"access2": {
+"crude": 7.6,
+"adjusted": 8.0,
+"ci_low": 5.8,
+"ci_high": 9.8
+},
+"diabetes": {
+"crude": 12.7,
+"adjusted": 10.2,
+"ci_low": 10.7,
+"ci_high": 14.7
+},
+"bphigh": {
+"crude": 38.0,
+"adjusted": 32.7,
+"ci_low": 33.6,
+"ci_high": 42.2
+},
+"depression": {
+"crude": 25.5,
+"adjusted": 26.8,
+"ci_low": 21.7,
+"ci_high": 29.5
+}
+}
+},
+{
+"county": "Defiance",
+"fips": "39039",
+"population": 38315,
+"adults": 29722,
+"indicators": {
+"colon_screen": {
+"crude": 66.4,
+"adjusted": 60.9,
+"ci_low": 61.3,
+"ci_high": 71.1
+},
+"mammouse": {
+"crude": 76.2,
+"adjusted": 75.7,
+"ci_low": 68.8,
+"ci_high": 82.8
+},
+"checkup": {
+"crude": 79.4,
+"adjusted": 76.9,
+"ci_low": 76.0,
+"ci_high": 82.6
+},
+"bpmed": {
+"crude": 79.6,
+"adjusted": 59.8,
+"ci_low": 77.0,
+"ci_high": 82.0
+},
+"access2": {
+"crude": 9.2,
+"adjusted": 9.6,
+"ci_low": 7.3,
+"ci_high": 11.2
+},
+"diabetes": {
+"crude": 13.3,
+"adjusted": 10.9,
+"ci_low": 11.4,
+"ci_high": 15.3
+},
+"bphigh": {
+"crude": 37.2,
+"adjusted": 32.3,
+"ci_low": 33.2,
+"ci_high": 41.3
+},
+"depression": {
+"crude": 25.0,
+"adjusted": 26.2,
+"ci_low": 21.6,
+"ci_high": 28.7
+}
+}
+},
+{
+"county": "Guernsey",
+"fips": "39059",
+"population": 38089,
+"adults": 29668,
+"indicators": {
+"colon_screen": {
+"crude": 65.6,
+"adjusted": 59.0,
+"ci_low": 60.6,
+"ci_high": 70.1
+},
+"mammouse": {
+"crude": 74.8,
+"adjusted": 74.4,
+"ci_low": 67.3,
+"ci_high": 81.3
+},
+"checkup": {
+"crude": 79.5,
+"adjusted": 76.7,
+"ci_low": 76.1,
+"ci_high": 82.7
+},
+"bpmed": {
+"crude": 80.4,
+"adjusted": 60.8,
+"ci_low": 77.9,
+"ci_high": 82.8
+},
+"access2": {
+"crude": 9.1,
+"adjusted": 9.5,
+"ci_low": 6.8,
+"ci_high": 11.8
+},
+"diabetes": {
+"crude": 14.8,
+"adjusted": 11.9,
+"ci_low": 12.8,
+"ci_high": 16.9
+},
+"bphigh": {
+"crude": 40.2,
+"adjusted": 34.5,
+"ci_low": 36.2,
+"ci_high": 44.2
+},
+"depression": {
+"crude": 27.3,
+"adjusted": 28.7,
+"ci_low": 23.6,
+"ci_high": 31.2
+}
+}
+},
+{
+"county": "Williams",
+"fips": "39171",
+"population": 36591,
+"adults": 28607,
+"indicators": {
+"colon_screen": {
+"crude": 65.8,
+"adjusted": 58.4,
+"ci_low": 61.1,
+"ci_high": 70.3
+},
+"mammouse": {
+"crude": 76.7,
+"adjusted": 75.6,
+"ci_low": 69.4,
+"ci_high": 83.0
+},
+"checkup": {
+"crude": 79.0,
+"adjusted": 76.2,
+"ci_low": 75.6,
+"ci_high": 82.4
+},
+"bpmed": {
+"crude": 79.9,
+"adjusted": 60.2,
+"ci_low": 77.3,
+"ci_high": 82.3
+},
+"access2": {
+"crude": 9.0,
+"adjusted": 9.5,
+"ci_low": 7.3,
+"ci_high": 11.1
+},
+"diabetes": {
+"crude": 14.4,
+"adjusted": 11.6,
+"ci_low": 12.6,
+"ci_high": 16.5
+},
+"bphigh": {
+"crude": 39.9,
+"adjusted": 34.4,
+"ci_low": 36.0,
+"ci_high": 44.4
+},
+"depression": {
+"crude": 25.8,
+"adjusted": 27.1,
+"ci_low": 22.3,
+"ci_high": 29.9
+}
+}
+},
+{
+"county": "Coshocton",
+"fips": "39031",
+"population": 36869,
+"adults": 28085,
+"indicators": {
+"colon_screen": {
+"crude": 60.9,
+"adjusted": 53.5,
+"ci_low": 55.9,
+"ci_high": 65.3
+},
+"mammouse": {
+"crude": 71.0,
+"adjusted": 70.4,
+"ci_low": 62.7,
+"ci_high": 77.9
+},
+"checkup": {
+"crude": 79.4,
+"adjusted": 76.5,
+"ci_low": 76.0,
+"ci_high": 82.5
+},
+"bpmed": {
+"crude": 80.6,
+"adjusted": 61.0,
+"ci_low": 78.0,
+"ci_high": 83.0
+},
+"access2": {
+"crude": 9.4,
+"adjusted": 9.9,
+"ci_low": 7.0,
+"ci_high": 12.1
+},
+"diabetes": {
+"crude": 15.3,
+"adjusted": 12.2,
+"ci_low": 13.1,
+"ci_high": 17.7
+},
+"bphigh": {
+"crude": 41.3,
+"adjusted": 35.3,
+"ci_low": 37.0,
+"ci_high": 45.4
+},
+"depression": {
+"crude": 27.7,
+"adjusted": 29.2,
+"ci_low": 23.7,
+"ci_high": 31.6
+}
+}
+},
+{
+"county": "Morrow",
+"fips": "39117",
+"population": 35595,
+"adults": 27894,
+"indicators": {
+"colon_screen": {
+"crude": 62.2,
+"adjusted": 56.9,
+"ci_low": 57.1,
+"ci_high": 67.2
+},
+"mammouse": {
+"crude": 73.1,
+"adjusted": 73.2,
+"ci_low": 65.1,
+"ci_high": 80.0
+},
+"checkup": {
+"crude": 80.0,
+"adjusted": 77.2,
+"ci_low": 76.4,
+"ci_high": 83.1
+},
+"bpmed": {
+"crude": 79.9,
+"adjusted": 59.7,
+"ci_low": 76.9,
+"ci_high": 82.4
+},
+"access2": {
+"crude": 8.0,
+"adjusted": 8.5,
+"ci_low": 6.2,
+"ci_high": 10.2
+},
+"diabetes": {
+"crude": 13.8,
+"adjusted": 11.0,
+"ci_low": 11.9,
+"ci_high": 15.8
+},
+"bphigh": {
+"crude": 38.2,
+"adjusted": 32.6,
+"ci_low": 34.0,
+"ci_high": 42.4
+},
+"depression": {
+"crude": 25.4,
+"adjusted": 26.7,
+"ci_low": 21.6,
+"ci_high": 29.2
+}
+}
+},
+{
+"county": "Perry",
+"fips": "39127",
+"population": 35551,
+"adults": 27260,
+"indicators": {
+"colon_screen": {
+"crude": 63.5,
+"adjusted": 58.4,
+"ci_low": 58.3,
+"ci_high": 68.3
+},
+"mammouse": {
+"crude": 72.4,
+"adjusted": 72.5,
+"ci_low": 64.0,
+"ci_high": 79.5
+},
+"checkup": {
+"crude": 79.2,
+"adjusted": 76.6,
+"ci_low": 75.6,
+"ci_high": 82.4
+},
+"bpmed": {
+"crude": 80.0,
+"adjusted": 60.9,
+"ci_low": 77.2,
+"ci_high": 82.4
+},
+"access2": {
+"crude": 8.8,
+"adjusted": 9.2,
+"ci_low": 6.6,
+"ci_high": 11.3
+},
+"diabetes": {
+"crude": 14.3,
+"adjusted": 11.6,
+"ci_low": 12.3,
+"ci_high": 16.4
+},
+"bphigh": {
+"crude": 40.5,
+"adjusted": 35.2,
+"ci_low": 36.4,
+"ci_high": 44.5
+},
+"depression": {
+"crude": 27.0,
+"adjusted": 28.2,
+"ci_low": 23.2,
+"ci_high": 30.8
+}
+}
+},
+{
+"county": "Putnam",
+"fips": "39137",
+"population": 34199,
+"adults": 25492,
+"indicators": {
+"colon_screen": {
+"crude": 67.9,
+"adjusted": 61.2,
+"ci_low": 63.4,
+"ci_high": 72.4
+},
+"mammouse": {
+"crude": 82.0,
+"adjusted": 81.5,
+"ci_low": 76.4,
+"ci_high": 87.0
+},
+"checkup": {
+"crude": 80.3,
+"adjusted": 77.6,
+"ci_low": 76.9,
+"ci_high": 83.5
+},
+"bpmed": {
+"crude": 80.1,
+"adjusted": 59.6,
+"ci_low": 77.2,
+"ci_high": 82.6
+},
+"access2": {
+"crude": 7.3,
+"adjusted": 7.7,
+"ci_low": 5.5,
+"ci_high": 9.4
+},
+"diabetes": {
+"crude": 12.3,
+"adjusted": 9.8,
+"ci_low": 10.4,
+"ci_high": 14.2
+},
+"bphigh": {
+"crude": 36.6,
+"adjusted": 31.1,
+"ci_low": 32.5,
+"ci_high": 40.6
+},
+"depression": {
+"crude": 24.2,
+"adjusted": 25.5,
+"ci_low": 20.7,
+"ci_high": 27.9
+}
+}
+},
+{
+"county": "Jackson",
+"fips": "39079",
+"population": 32606,
+"adults": 24867,
+"indicators": {
+"colon_screen": {
+"crude": 62.5,
+"adjusted": 57.5,
+"ci_low": 57.4,
+"ci_high": 67.3
+},
+"mammouse": {
+"crude": 70.6,
+"adjusted": 70.4,
+"ci_low": 62.3,
+"ci_high": 77.6
+},
+"checkup": {
+"crude": 78.9,
+"adjusted": 76.6,
+"ci_low": 75.4,
+"ci_high": 82.0
+},
+"bpmed": {
+"crude": 78.5,
+"adjusted": 60.4,
+"ci_low": 76.0,
+"ci_high": 81.0
+},
+"access2": {
+"crude": 9.1,
+"adjusted": 9.5,
+"ci_low": 6.9,
+"ci_high": 11.6
+},
+"diabetes": {
+"crude": 14.9,
+"adjusted": 12.4,
+"ci_low": 13.0,
+"ci_high": 17.1
+},
+"bphigh": {
+"crude": 42.7,
+"adjusted": 38.0,
+"ci_low": 38.8,
+"ci_high": 46.7
+},
+"depression": {
+"crude": 28.9,
+"adjusted": 29.9,
+"ci_low": 25.3,
+"ci_high": 32.8
+}
+}
+},
+{
+"county": "Hardin",
+"fips": "39065",
+"population": 30368,
+"adults": 23282,
+"indicators": {
+"colon_screen": {
+"crude": 61.3,
+"adjusted": 55.8,
+"ci_low": 56.2,
+"ci_high": 66.1
+},
+"mammouse": {
+"crude": 72.6,
+"adjusted": 72.1,
+"ci_low": 64.4,
+"ci_high": 79.8
+},
+"checkup": {
+"crude": 77.8,
+"adjusted": 76.8,
+"ci_low": 74.1,
+"ci_high": 81.1
+},
+"bpmed": {
+"crude": 77.5,
+"adjusted": 61.1,
+"ci_low": 75.0,
+"ci_high": 79.8
+},
+"access2": {
+"crude": 8.7,
+"adjusted": 9.1,
+"ci_low": 6.6,
+"ci_high": 11.2
+},
+"diabetes": {
+"crude": 12.9,
+"adjusted": 11.9,
+"ci_low": 11.2,
+"ci_high": 14.8
+},
+"bphigh": {
+"crude": 38.1,
+"adjusted": 36.7,
+"ci_low": 34.2,
+"ci_high": 42.0
+},
+"depression": {
+"crude": 27.1,
+"adjusted": 27.5,
+"ci_low": 23.5,
+"ci_high": 31.1
+}
+}
+},
+{
+"county": "Gallia",
+"fips": "39053",
+"population": 28986,
+"adults": 22229,
+"indicators": {
+"colon_screen": {
+"crude": 65.6,
+"adjusted": 59.1,
+"ci_low": 61.1,
+"ci_high": 69.7
+},
+"mammouse": {
+"crude": 71.9,
+"adjusted": 71.1,
+"ci_low": 64.2,
+"ci_high": 78.4
+},
+"checkup": {
+"crude": 79.7,
+"adjusted": 76.9,
+"ci_low": 76.3,
+"ci_high": 82.9
+},
+"bpmed": {
+"crude": 80.4,
+"adjusted": 61.1,
+"ci_low": 77.8,
+"ci_high": 82.8
+},
+"access2": {
+"crude": 9.3,
+"adjusted": 9.8,
+"ci_low": 7.0,
+"ci_high": 12.4
+},
+"diabetes": {
+"crude": 15.3,
+"adjusted": 12.3,
+"ci_low": 13.2,
+"ci_high": 17.5
+},
+"bphigh": {
+"crude": 41.5,
+"adjusted": 35.9,
+"ci_low": 37.3,
+"ci_high": 45.7
+},
+"depression": {
+"crude": 28.3,
+"adjusted": 29.7,
+"ci_low": 24.4,
+"ci_high": 32.3
+}
+}
+},
+{
+"county": "Van Wert",
+"fips": "39161",
+"population": 28704,
+"adults": 22097,
+"indicators": {
+"colon_screen": {
+"crude": 63.3,
+"adjusted": 55.9,
+"ci_low": 58.5,
+"ci_high": 67.7
+},
+"mammouse": {
+"crude": 75.3,
+"adjusted": 75.2,
+"ci_low": 67.4,
+"ci_high": 81.9
+},
+"checkup": {
+"crude": 79.4,
+"adjusted": 76.6,
+"ci_low": 75.9,
+"ci_high": 82.6
+},
+"bpmed": {
+"crude": 79.9,
+"adjusted": 59.8,
+"ci_low": 77.2,
+"ci_high": 82.2
+},
+"access2": {
+"crude": 8.1,
+"adjusted": 8.5,
+"ci_low": 6.4,
+"ci_high": 10.1
+},
+"diabetes": {
+"crude": 13.2,
+"adjusted": 10.6,
+"ci_low": 11.4,
+"ci_high": 15.1
+},
+"bphigh": {
+"crude": 38.8,
+"adjusted": 33.3,
+"ci_low": 34.7,
+"ci_high": 43.1
+},
+"depression": {
+"crude": 25.7,
+"adjusted": 27.1,
+"ci_low": 22.1,
+"ci_high": 29.6
+}
+}
+},
+{
+"county": "Fayette",
+"fips": "39047",
+"population": 28817,
+"adults": 22051,
+"indicators": {
+"colon_screen": {
+"crude": 58.6,
+"adjusted": 52.9,
+"ci_low": 53.2,
+"ci_high": 63.7
+},
+"mammouse": {
+"crude": 70.7,
+"adjusted": 70.2,
+"ci_low": 61.9,
+"ci_high": 78.1
+},
+"checkup": {
+"crude": 78.2,
+"adjusted": 75.8,
+"ci_low": 74.4,
+"ci_high": 81.5
+},
+"bpmed": {
+"crude": 78.8,
+"adjusted": 60.3,
+"ci_low": 76.0,
+"ci_high": 81.2
+},
+"access2": {
+"crude": 9.4,
+"adjusted": 9.8,
+"ci_low": 7.1,
+"ci_high": 12.2
+},
+"diabetes": {
+"crude": 14.3,
+"adjusted": 11.9,
+"ci_low": 12.4,
+"ci_high": 16.5
+},
+"bphigh": {
+"crude": 41.6,
+"adjusted": 36.8,
+"ci_low": 37.6,
+"ci_high": 45.6
+},
+"depression": {
+"crude": 26.8,
+"adjusted": 27.9,
+"ci_low": 23.3,
+"ci_high": 30.8
+}
+}
+},
+{
+"county": "Hocking",
+"fips": "39073",
+"population": 27540,
+"adults": 21637,
+"indicators": {
+"colon_screen": {
+"crude": 66.0,
+"adjusted": 59.2,
+"ci_low": 61.6,
+"ci_high": 70.4
+},
+"mammouse": {
+"crude": 71.0,
+"adjusted": 70.6,
+"ci_low": 63.0,
+"ci_high": 77.9
+},
+"checkup": {
+"crude": 80.1,
+"adjusted": 77.0,
+"ci_low": 76.9,
+"ci_high": 83.1
+},
+"bpmed": {
+"crude": 81.1,
+"adjusted": 61.4,
+"ci_low": 78.5,
+"ci_high": 83.4
+},
+"access2": {
+"crude": 8.7,
+"adjusted": 9.3,
+"ci_low": 6.6,
+"ci_high": 11.3
+},
+"diabetes": {
+"crude": 15.7,
+"adjusted": 12.3,
+"ci_low": 13.6,
+"ci_high": 17.9
+},
+"bphigh": {
+"crude": 42.5,
+"adjusted": 36.0,
+"ci_low": 38.5,
+"ci_high": 46.5
+},
+"depression": {
+"crude": 27.1,
+"adjusted": 28.7,
+"ci_low": 23.7,
+"ci_high": 30.9
+}
+}
+},
+{
+"county": "Carroll",
+"fips": "39019",
+"population": 26758,
+"adults": 21195,
+"indicators": {
+"colon_screen": {
+"crude": 65.7,
+"adjusted": 59.2,
+"ci_low": 60.7,
+"ci_high": 70.7
+},
+"mammouse": {
+"crude": 76.3,
+"adjusted": 75.3,
+"ci_low": 68.7,
+"ci_high": 82.9
+},
+"checkup": {
+"crude": 80.5,
+"adjusted": 76.8,
+"ci_low": 77.0,
+"ci_high": 83.7
+},
+"bpmed": {
+"crude": 81.6,
+"adjusted": 60.4,
+"ci_low": 78.9,
+"ci_high": 84.1
+},
+"access2": {
+"crude": 8.4,
+"adjusted": 9.0,
+"ci_low": 6.4,
+"ci_high": 10.7
+},
+"diabetes": {
+"crude": 14.9,
+"adjusted": 11.2,
+"ci_low": 12.7,
+"ci_high": 17.1
+},
+"bphigh": {
+"crude": 41.1,
+"adjusted": 33.6,
+"ci_low": 36.5,
+"ci_high": 45.4
+},
+"depression": {
+"crude": 25.5,
+"adjusted": 27.4,
+"ci_low": 21.7,
+"ci_high": 29.5
+}
+}
+},
+{
+"county": "Henry",
+"fips": "39069",
+"population": 27520,
+"adults": 21192,
+"indicators": {
+"colon_screen": {
+"crude": 66.1,
+"adjusted": 60.3,
+"ci_low": 61.2,
+"ci_high": 70.8
+},
+"mammouse": {
+"crude": 78.1,
+"adjusted": 77.8,
+"ci_low": 71.2,
+"ci_high": 84.4
+},
+"checkup": {
+"crude": 79.9,
+"adjusted": 77.1,
+"ci_low": 76.2,
+"ci_high": 83.1
+},
+"bpmed": {
+"crude": 79.7,
+"adjusted": 59.5,
+"ci_low": 76.9,
+"ci_high": 82.3
+},
+"access2": {
+"crude": 8.5,
+"adjusted": 8.9,
+"ci_low": 6.7,
+"ci_high": 10.4
+},
+"diabetes": {
+"crude": 13.1,
+"adjusted": 10.5,
+"ci_low": 11.2,
+"ci_high": 15.1
+},
+"bphigh": {
+"crude": 38.1,
+"adjusted": 32.6,
+"ci_low": 33.9,
+"ci_high": 42.4
+},
+"depression": {
+"crude": 24.8,
+"adjusted": 26.1,
+"ci_low": 21.1,
+"ci_high": 28.4
+}
+}
+},
+{
+"county": "Adams",
+"fips": "39001",
+"population": 27521,
+"adults": 20867,
+"indicators": {
+"colon_screen": {
+"crude": 57.6,
+"adjusted": 52.2,
+"ci_low": 52.2,
+"ci_high": 62.7
+},
+"mammouse": {
+"crude": 72.4,
+"adjusted": 72.4,
+"ci_low": 64.6,
+"ci_high": 79.3
+},
+"checkup": {
+"crude": 79.3,
+"adjusted": 76.7,
+"ci_low": 75.9,
+"ci_high": 82.5
+},
+"bpmed": {
+"crude": 80.8,
+"adjusted": 61.7,
+"ci_low": 78.3,
+"ci_high": 83.1
+},
+"access2": {
+"crude": 9.6,
+"adjusted": 10.2,
+"ci_low": 7.2,
+"ci_high": 12.3
+},
+"diabetes": {
+"crude": 15.7,
+"adjusted": 12.7,
+"ci_low": 13.7,
+"ci_high": 17.9
+},
+"bphigh": {
+"crude": 40.6,
+"adjusted": 35.1,
+"ci_low": 36.7,
+"ci_high": 44.5
+},
+"depression": {
+"crude": 26.6,
+"adjusted": 27.9,
+"ci_low": 22.9,
+"ci_high": 30.2
+}
+}
+},
+{
+"county": "Pike",
+"fips": "39131",
+"population": 27001,
+"adults": 20683,
+"indicators": {
+"colon_screen": {
+"crude": 58.3,
+"adjusted": 53.7,
+"ci_low": 53.1,
+"ci_high": 63.5
+},
+"mammouse": {
+"crude": 69.5,
+"adjusted": 69.2,
+"ci_low": 61.6,
+"ci_high": 77.1
+},
+"checkup": {
+"crude": 79.7,
+"adjusted": 77.2,
+"ci_low": 76.3,
+"ci_high": 82.9
+},
+"bpmed": {
+"crude": 80.0,
+"adjusted": 61.7,
+"ci_low": 77.4,
+"ci_high": 82.4
+},
+"access2": {
+"crude": 10.2,
+"adjusted": 10.7,
+"ci_low": 7.6,
+"ci_high": 13.0
+},
+"diabetes": {
+"crude": 16.2,
+"adjusted": 13.2,
+"ci_low": 13.8,
+"ci_high": 18.5
+},
+"bphigh": {
+"crude": 43.7,
+"adjusted": 38.4,
+"ci_low": 39.4,
+"ci_high": 47.9
+},
+"depression": {
+"crude": 29.2,
+"adjusted": 30.5,
+"ci_low": 25.1,
+"ci_high": 33.5
+}
+}
+},
+{
+"county": "Meigs",
+"fips": "39105",
+"population": 21767,
+"adults": 17309,
+"indicators": {
+"colon_screen": {
+"crude": 59.8,
+"adjusted": 53.6,
+"ci_low": 54.7,
+"ci_high": 64.7
+},
+"mammouse": {
+"crude": 74.4,
+"adjusted": 74.4,
+"ci_low": 66.9,
+"ci_high": 81.2
+},
+"checkup": {
+"crude": 79.8,
+"adjusted": 76.5,
+"ci_low": 76.6,
+"ci_high": 82.8
+},
+"bpmed": {
+"crude": 81.1,
+"adjusted": 61.5,
+"ci_low": 78.5,
+"ci_high": 83.3
+},
+"access2": {
+"crude": 9.6,
+"adjusted": 10.3,
+"ci_low": 7.4,
+"ci_high": 12.3
+},
+"diabetes": {
+"crude": 17.3,
+"adjusted": 13.5,
+"ci_low": 15.0,
+"ci_high": 19.5
+},
+"bphigh": {
+"crude": 45.1,
+"adjusted": 38.2,
+"ci_low": 41.0,
+"ci_high": 49.1
+},
+"depression": {
+"crude": 27.7,
+"adjusted": 29.4,
+"ci_low": 24.2,
+"ci_high": 31.4
+}
+}
+},
+{
+"county": "Wyandot",
+"fips": "39175",
+"population": 21457,
+"adults": 16768,
+"indicators": {
+"colon_screen": {
+"crude": 63.6,
+"adjusted": 57.5,
+"ci_low": 58.4,
+"ci_high": 68.2
+},
+"mammouse": {
+"crude": 77.1,
+"adjusted": 76.3,
+"ci_low": 69.3,
+"ci_high": 83.2
+},
+"checkup": {
+"crude": 79.8,
+"adjusted": 76.7,
+"ci_low": 76.5,
+"ci_high": 83.1
+},
+"bpmed": {
+"crude": 79.6,
+"adjusted": 58.8,
+"ci_low": 77.0,
+"ci_high": 82.2
+},
+"access2": {
+"crude": 7.4,
+"adjusted": 7.8,
+"ci_low": 5.8,
+"ci_high": 9.4
+},
+"diabetes": {
+"crude": 13.0,
+"adjusted": 10.2,
+"ci_low": 11.2,
+"ci_high": 14.9
+},
+"bphigh": {
+"crude": 39.1,
+"adjusted": 32.9,
+"ci_low": 34.9,
+"ci_high": 43.3
+},
+"depression": {
+"crude": 24.6,
+"adjusted": 26.1,
+"ci_low": 21.1,
+"ci_high": 28.6
+}
+}
+},
+{
+"county": "Paulding",
+"fips": "39125",
+"population": 18706,
+"adults": 14290,
+"indicators": {
+"colon_screen": {
+"crude": 63.3,
+"adjusted": 57.1,
+"ci_low": 58.1,
+"ci_high": 68.3
+},
+"mammouse": {
+"crude": 75.8,
+"adjusted": 74.9,
+"ci_low": 68.2,
+"ci_high": 82.5
+},
+"checkup": {
+"crude": 79.7,
+"adjusted": 76.8,
+"ci_low": 76.3,
+"ci_high": 83.1
+},
+"bpmed": {
+"crude": 79.9,
+"adjusted": 59.6,
+"ci_low": 77.2,
+"ci_high": 82.4
+},
+"access2": {
+"crude": 8.7,
+"adjusted": 9.3,
+"ci_low": 6.7,
+"ci_high": 11.0
+},
+"diabetes": {
+"crude": 14.1,
+"adjusted": 11.2,
+"ci_low": 12.2,
+"ci_high": 16.5
+},
+"bphigh": {
+"crude": 40.0,
+"adjusted": 34.0,
+"ci_low": 35.7,
+"ci_high": 44.5
+},
+"depression": {
+"crude": 25.7,
+"adjusted": 27.1,
+"ci_low": 21.9,
+"ci_high": 29.9
+}
+}
+},
+{
+"county": "Noble",
+"fips": "39121",
+"population": 14311,
+"adults": 11564,
+"indicators": {
+"colon_screen": {
+"crude": 66.7,
+"adjusted": 55.7,
+"ci_low": 61.8,
+"ci_high": 71.5
+},
+"mammouse": {
+"crude": 73.3,
+"adjusted": 72.9,
+"ci_low": 65.5,
+"ci_high": 80.4
+},
+"checkup": {
+"crude": 81.8,
+"adjusted": 75.9,
+"ci_low": 78.5,
+"ci_high": 84.9
+},
+"bpmed": {
+"crude": 84.6,
+"adjusted": 60.4,
+"ci_low": 82.2,
+"ci_high": 86.7
+},
+"access2": {
+"crude": 8.8,
+"adjusted": 9.8,
+"ci_low": 6.7,
+"ci_high": 11.5
+},
+"diabetes": {
+"crude": 18.0,
+"adjusted": 11.8,
+"ci_low": 15.5,
+"ci_high": 20.7
+},
+"bphigh": {
+"crude": 47.9,
+"adjusted": 35.3,
+"ci_low": 43.3,
+"ci_high": 52.5
+},
+"depression": {
+"crude": 23.4,
+"adjusted": 27.3,
+"ci_low": 20.0,
+"ci_high": 27.2
+}
+}
+},
+{
+"county": "Harrison",
+"fips": "39067",
+"population": 14159,
+"adults": 11246,
+"indicators": {
+"colon_screen": {
+"crude": 64.6,
+"adjusted": 57.3,
+"ci_low": 59.3,
+"ci_high": 69.5
+},
+"mammouse": {
+"crude": 74.2,
+"adjusted": 73.6,
+"ci_low": 66.5,
+"ci_high": 81.3
+},
+"checkup": {
+"crude": 79.5,
+"adjusted": 75.8,
+"ci_low": 76.1,
+"ci_high": 82.7
+},
+"bpmed": {
+"crude": 81.2,
+"adjusted": 60.2,
+"ci_low": 78.7,
+"ci_high": 83.5
+},
+"access2": {
+"crude": 8.6,
+"adjusted": 9.2,
+"ci_low": 6.6,
+"ci_high": 11.1
+},
+"diabetes": {
+"crude": 15.6,
+"adjusted": 11.8,
+"ci_low": 13.6,
+"ci_high": 17.8
+},
+"bphigh": {
+"crude": 43.0,
+"adjusted": 35.5,
+"ci_low": 39.0,
+"ci_high": 47.3
+},
+"depression": {
+"crude": 26.8,
+"adjusted": 28.7,
+"ci_low": 23.2,
+"ci_high": 30.7
+}
+}
+},
+{
+"county": "Morgan",
+"fips": "39115",
+"population": 13646,
+"adults": 10828,
+"indicators": {
+"colon_screen": {
+"crude": 61.7,
+"adjusted": 56.2,
+"ci_low": 56.2,
+"ci_high": 67.2
+},
+"mammouse": {
+"crude": 72.9,
+"adjusted": 72.3,
+"ci_low": 65.2,
+"ci_high": 80.1
+},
+"checkup": {
+"crude": 80.8,
+"adjusted": 77.4,
+"ci_low": 77.3,
+"ci_high": 84.0
+},
+"bpmed": {
+"crude": 81.7,
+"adjusted": 61.6,
+"ci_low": 79.2,
+"ci_high": 84.2
+},
+"access2": {
+"crude": 8.8,
+"adjusted": 9.4,
+"ci_low": 6.6,
+"ci_high": 11.1
+},
+"diabetes": {
+"crude": 16.0,
+"adjusted": 12.3,
+"ci_low": 13.9,
+"ci_high": 18.4
+},
+"bphigh": {
+"crude": 43.1,
+"adjusted": 35.9,
+"ci_low": 38.9,
+"ci_high": 47.5
+},
+"depression": {
+"crude": 26.5,
+"adjusted": 28.3,
+"ci_low": 22.9,
+"ci_high": 30.6
+}
+}
+},
+{
+"county": "Monroe",
+"fips": "39111",
+"population": 13153,
+"adults": 10468,
+"indicators": {
+"colon_screen": {
+"crude": 61.5,
+"adjusted": 53.1,
+"ci_low": 56.7,
+"ci_high": 66.3
+},
+"mammouse": {
+"crude": 71.1,
+"adjusted": 70.9,
+"ci_low": 63.0,
+"ci_high": 78.9
+},
+"checkup": {
+"crude": 80.4,
+"adjusted": 76.5,
+"ci_low": 77.1,
+"ci_high": 83.5
+},
+"bpmed": {
+"crude": 82.1,
+"adjusted": 61.0,
+"ci_low": 79.5,
+"ci_high": 84.3
+},
+"access2": {
+"crude": 8.7,
+"adjusted": 9.4,
+"ci_low": 6.7,
+"ci_high": 11.2
+},
+"diabetes": {
+"crude": 16.1,
+"adjusted": 12.0,
+"ci_low": 14.0,
+"ci_high": 18.5
+},
+"bphigh": {
+"crude": 43.3,
+"adjusted": 35.3,
+"ci_low": 39.0,
+"ci_high": 47.7
+},
+"depression": {
+"crude": 26.6,
+"adjusted": 28.7,
+"ci_low": 23.0,
+"ci_high": 30.7
+}
+}
+},
+{
+"county": "Vinton",
+"fips": "39163",
+"population": 12474,
+"adults": 9815,
+"indicators": {
+"colon_screen": {
+"crude": 60.4,
+"adjusted": 55.2,
+"ci_low": 55.1,
+"ci_high": 65.6
+},
+"mammouse": {
+"crude": 68.6,
+"adjusted": 66.9,
+"ci_low": 59.9,
+"ci_high": 76.6
+},
+"checkup": {
+"crude": 79.1,
+"adjusted": 76.3,
+"ci_low": 75.4,
+"ci_high": 82.5
+},
+"bpmed": {
+"crude": 80.6,
+"adjusted": 61.4,
+"ci_low": 78.0,
+"ci_high": 83.1
+},
+"access2": {
+"crude": 9.5,
+"adjusted": 10.1,
+"ci_low": 7.2,
+"ci_high": 12.2
+},
+"diabetes": {
+"crude": 15.4,
+"adjusted": 12.3,
+"ci_low": 13.3,
+"ci_high": 17.5
+},
+"bphigh": {
+"crude": 41.2,
+"adjusted": 35.4,
+"ci_low": 36.8,
+"ci_high": 45.4
+},
+"depression": {
+"crude": 28.1,
+"adjusted": 29.4,
+"ci_low": 24.2,
+"ci_high": 32.1
+}
+}
+}
+]
+}

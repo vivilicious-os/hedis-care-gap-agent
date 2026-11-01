@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you reference this project, please cite it as below."
+title: "HEDIS Public Intelligence Agent"
+abstract: "A HEDIS intelligence agent for value-based care teams built only on public data: Medicaid Core Set, CMS MIPS and CDC PLACES."
+authors:
+  - alias: vivilicious-os
+version: 1.0.0
+date-released: 2026-11-01
+license: MIT
+repository-code: "https://github.com/vivilicious-os/hedis-care-gap-agent"
+keywords: [HEDIS, value-based care, population health, care gaps, AI agent, Claude]

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEDIS Public Intelligence</title>
+<meta name="description" content="A Claude-powered HEDIS agent built only on public data: Medicaid Core Set, CMS MIPS and CDC PLACES.">
+<style>
+:root{
+  color-scheme:light;
+  --page:#f6f6f3;--card:#ffffff;--sunk:#f9f9f7;--ink:#0b0b0b;--ink2:#52514e;--muted:#898781;
+  --grid:#e7e6e0;--axis:#c3c2b7;--ring:rgba(11,11,11,.08);
+  --s1:#2a78d6;--s1-soft:#a9cbf3;--s1-wash:#eef4fc;--s2:#eb6834;--s3:#1baf7a;
+  --good:#0ca30c;--good-text:#006300;--serious:#ec835a;--crit:#d03b3b;
+  --neg3:#d03b3b;--neg2:#ec9a99;--neg1:#f7d7d6;--mid:#f0efec;--pos1:#cde2fb;--pos2:#86b6ef;--pos3:#2a78d6;
+  --chip:#f0efec;--shadow:0 1px 2px rgba(16,24,40,.04),0 1px 3px rgba(16,24,40,.06);
+  --hero:linear-gradient(135deg,#0f2f57 0%,#1c5cab 60%,#2a78d6 100%);
+}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){
+  color-scheme:dark;
+  --page:#0d0d0d;--card:#1a1a19;--sunk:#141413;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;
+  --grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.09);
+  --s1:#3987e5;--s1-soft:#1f4f8c;--s1-wash:#16253a;--s2:#d95926;--s3:#199e70;--good-text:#0ca30c;
+  --neg3:#e66767;--neg2:#9a3c3c;--neg1:#552d2d;--mid:#383835;--pos1:#22395a;--pos2:#1c5cab;--pos3:#3987e5;
+  --chip:#262624;--shadow:none;--hero:linear-gradient(135deg,#0b1d36 0%,#14396b 60%,#1c5cab 100%);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d;--card:#1a1a19;--sunk:#141413;--ink:#f0efec;--ink2:#c3c2b7;--muted:#898781;
+  --grid:#2c2c2a;--axis:#383835;--ring:rgba(255,255,255,.09);
+  --s1:#3987e5;--s1-soft:#1f4f8c;--s1-wash:#16253a;--s2:#d95926;--s3:#199e70;--good-text:#0ca30c;
+  --neg3:#e66767;--neg2:#9a3c3c;--neg1:#552d2d;--mid:#383835;--pos1:#22395a;--pos2:#1c5cab;--pos3:#3987e5;
+  --chip:#262624;--shadow:none;--hero:linear-gradient(135deg,#0b1d36 0%,#14396b 60%,#1c5cab 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--page);color:var(--ink);font:14px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--s1)}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+@media (max-width:760px){.wrap{padding:0 16px}}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--page) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--grid)}
+@media (max-width:760px){.top{position:static}}
+.bar{display:flex;gap:14px;align-items:center;padding:12px 0;flex-wrap:wrap}
+.logo{width:34px;height:34px;border-radius:9px;background:var(--hero);display:grid;place-items:center;flex:0 0 auto}
+.brand{font-weight:700;font-size:16px;letter-spacing:-.01em;line-height:1.2}
+.sub{color:var(--ink2);font-size:12.5px}
+.spacer{flex:1}
+.pill{font-size:12px;color:var(--ink2);background:var(--chip);border:1px solid var(--ring);padding:3px 10px;border-radius:999px;white-space:nowrap}
+.btn{border:1px solid var(--ring);background:var(--card);color:var(--ink);padding:7px 13px;border-radius:9px;font-size:13px;font-weight:500;text-decoration:none;display:inline-block}
+.btn:hover{background:var(--chip)}
+.btn.primary{background:var(--s1);border-color:transparent;color:#fff}
+.btn.primary:hover{filter:brightness(1.06)}
+nav{display:flex;gap:2px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+nav a{color:var(--ink2);text-decoration:none;padding:5px 11px;border-radius:8px;white-space:nowrap;font-size:13px}
+nav a:hover{background:var(--chip);color:var(--ink)}
+.intro{display:none;margin-top:16px;border:1px solid var(--ring);background:var(--card);border-radius:12px;padding:12px 16px;font-size:13px;color:var(--ink2);gap:10px;align-items:center;flex-wrap:wrap}
+.intro b{color:var(--ink)}.intro.show{display:flex}
+.hero{margin-top:18px;border-radius:16px;background:var(--hero);color:#fff;padding:24px;display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:center}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.hero .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.hero h1{font-size:28px;line-height:1.2;margin:6px 0 8px;letter-spacing:-.02em;font-weight:700}
+.hero p{margin:0;opacity:.88;font-size:14px}
+.hstats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.hstat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 14px}
+.hstat .l{font-size:12px;opacity:.82}.hstat .v{font-size:24px;font-weight:700;letter-spacing:-.01em}.hstat .s{font-size:12px;opacity:.78}
+section{margin-top:40px}
+.sh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.num{font-size:12px;font-weight:700;color:var(--s1);letter-spacing:.06em}
+h2{font-size:20px;margin:0;letter-spacing:-.01em}
+.lede{color:var(--ink2);margin:-4px 0 14px;font-size:13px;max-width:900px}
+.card{background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.card h3{font-size:14px;margin:0 0 8px}
+.grid{display:grid;gap:14px}
+.two{grid-template-columns:1.2fr 1fr}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
+.headline{margin:0;padding:0;list-style:none}
+.headline li{padding:9px 0 9px 26px;border-top:1px solid var(--grid);position:relative}
+.headline li:first-child{border-top:0;padding-top:2px}
+.headline li::before{content:"";position:absolute;left:4px;top:15px;width:8px;height:8px;border-radius:50%;background:var(--s1)}
+.headline li:first-child::before{top:8px}
+.plan-item{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--grid)}
+.plan-item:first-child{border-top:0;padding-top:2px}
+.pn{flex:0 0 26px;height:26px;border-radius:8px;background:var(--s1-wash);color:var(--s1);font-size:13px;font-weight:700;display:grid;place-items:center}
+.pt{font-weight:600}.pd{color:var(--ink2);font-size:13px}
+.brow{display:grid;grid-template-columns:230px 1fr 230px;gap:18px;align-items:center;padding:11px 8px;border-top:1px solid var(--grid)}
+.brow:first-child{border-top:0}.brow:hover{background:var(--sunk)}
+@media (max-width:760px){.brow{grid-template-columns:1fr;gap:8px}}
+.bname b{font-size:14px}.bname .full{display:block;font-size:12px;color:var(--ink2)}
+.chip{display:inline-block;font-size:11px;font-weight:600;background:var(--chip);color:var(--ink2);border-radius:999px;padding:1px 8px;margin-left:4px;vertical-align:1px}
+.track{position:relative;height:22px}
+.track .rail{position:absolute;left:0;right:0;top:7px;height:8px;border-radius:4px;background:var(--grid)}
+.track .iqr{position:absolute;top:7px;height:8px;background:var(--axis);opacity:.55}
+.track .cur{position:absolute;left:0;top:7px;height:8px;background:var(--s1);border-radius:4px}
+.track .tgt{position:absolute;top:1px;height:20px;width:3px;margin-left:-1.5px;background:var(--ink);border-radius:2px}
+.track .med{position:absolute;top:4px;height:14px;width:2px;margin-left:-1px;background:var(--muted);border-radius:1px}
+.axisrow{border-top:1px solid var(--grid);padding-top:6px;padding-bottom:0}.axisrow:hover{background:none}
+.axis{position:relative;height:14px;font-size:11px;color:var(--muted)}
+.axis span{position:absolute;transform:translateX(-50%)}
+@media (max-width:760px){.axisrow{display:none}}
+.bstat{font-size:13px;font-variant-numeric:tabular-nums;text-align:right}
+@media (max-width:760px){.bstat{text-align:left}}
+.bstat .rate{font-size:18px;font-weight:700;letter-spacing:-.01em}
+.status{display:inline-block;font-size:12px;margin-top:2px;color:var(--ink2)}
+.st-Top::before{content:"★ ";color:var(--good)}.st-Above::before{content:"▲ ";color:var(--good)}
+.st-Below::before{content:"▼ ";color:var(--serious)}.st-Bottom::before{content:"▼ ";color:var(--crit)}
+.st-Not{color:var(--muted)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin-top:12px;padding-top:12px;border-top:1px solid var(--grid)}
+.legend i{display:inline-block;width:14px;height:8px;border-radius:2px;margin-right:6px;vertical-align:0}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+.spark{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.spark .card{padding:14px}
+.spark svg{width:100%;height:90px;display:block;overflow:visible}
+.spark .delta{font-size:12px;color:var(--ink2)}
+.strip{display:grid;grid-template-columns:200px 1fr 70px;gap:14px;align-items:center;padding:7px 8px;border-top:1px solid var(--grid)}
+.strip:first-child{border-top:0}
+@media (max-width:760px){.strip{grid-template-columns:1fr}}
+.strip svg{width:100%;height:26px;display:block;overflow:visible}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--grid);text-align:left;vertical-align:middle}
+th{font-size:11.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em;background:var(--card)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr:hover td{background:var(--sunk)}
+.heat td.cell{text-align:center;font-variant-numeric:tabular-nums;border:3px solid var(--card);border-radius:8px;min-width:70px;padding:6px}
+.hl-neg3{background:var(--neg3);color:#fff}.hl-neg2{background:var(--neg2)}.hl-neg1{background:var(--neg1)}
+.hl-mid{background:var(--mid)}.hl-pos1{background:var(--pos1)}.hl-pos2{background:var(--pos2)}.hl-pos3{background:var(--pos3);color:#fff}
+.scale{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--ink2);margin-top:12px;flex-wrap:wrap}
+.scale span.sw{width:24px;height:10px;border-radius:3px;display:inline-block}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{border:1px solid var(--ring);background:var(--card);color:var(--ink2);border-radius:999px;padding:5px 12px;font-size:12.5px}
+.tabs button.on{background:var(--s1);color:#fff;border-color:transparent}
+.pstats{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:10px;font-size:12.5px;color:var(--ink2)}
+.pstats b{display:block;font-size:18px;color:var(--ink)}
+.camps{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+.camp{display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+.camp::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--kc)}
+.k-Statewide{--kc:var(--s1)}.k-Community{--kc:var(--s3)}.k-Provider{--kc:var(--s2)}
+.camp .hd{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.kind{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2);display:flex;align-items:center;gap:6px}
+.kind i{width:8px;height:8px;border-radius:50%;background:var(--kc)}
+.rank{font-size:12px;font-weight:700;color:var(--muted)}
+.camp .nm{font-weight:650;font-size:15px;line-height:1.3;margin-top:2px}
+.size{background:var(--sunk);border-radius:10px;padding:10px;font-size:13px}
+.why{font-size:12.5px;color:var(--ink2)}
+.targets{display:flex;flex-wrap:wrap;gap:4px}
+.targets span{font-size:12px;background:var(--chip);border-radius:6px;padding:2px 7px}
+.acts{display:flex;gap:8px;margin-top:auto;padding-top:4px}.acts .btn{font-size:12px;padding:6px 11px}
+.klegend{display:flex;gap:16px;font-size:12px;color:var(--ink2);margin:-6px 0 12px;flex-wrap:wrap}
+.klegend span{display:flex;align-items:center;gap:6px}.klegend i{width:10px;height:10px;border-radius:50%}
+.flag::before{content:"⚠ ";color:var(--serious)}.okc::before{content:"✓ ";color:var(--good)}
+.dim{color:var(--ink2);font-size:12px}
+.na{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.na .card{border-style:dashed}
+.srcs{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.src .kind.pub{color:var(--s1)}
+.src h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--axis)}
+.src ul{padding-left:16px;margin:8px 0 0}.src li{font-size:12px;color:var(--ink2);margin:3px 0}
+#tip{position:fixed;z-index:50;pointer-events:none;background:#0b0b0b;color:#f0efec;font-size:12px;padding:8px 10px;border-radius:8px;max-width:320px;opacity:0;transition:opacity .08s;white-space:pre-line;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(470px,100vw);background:var(--card);border-left:1px solid var(--ring);z-index:40;transform:translateX(100%);transition:transform .22s ease;display:flex;flex-direction:column;box-shadow:-12px 0 40px rgba(0,0,0,.10)}
+#drawer.open{transform:none}
+.dh{padding:14px 16px;border-bottom:1px solid var(--grid);display:flex;align-items:center;gap:10px}
+.dh .t{flex:1}.dh .t b{display:block}.dh .t span{font-size:12px;color:var(--ink2)}
+#msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;background:var(--sunk)}
+.msg{padding:10px 13px;border-radius:12px;font-size:13.5px;line-height:1.55;overflow-x:auto}
+.msg.user{background:var(--s1);color:#fff;align-self:flex-end;max-width:85%;border-bottom-right-radius:4px}
+.msg.bot{background:var(--card);border:1px solid var(--ring);border-bottom-left-radius:4px}
+.msg.bot table{font-size:12px}.msg.bot th,.msg.bot td{padding:4px 6px}
+.msg.bot p{margin:6px 0}.msg.bot ul,.msg.bot ol{margin:6px 0;padding-left:18px}
+.msg.sys{font-size:12px;color:var(--ink2);text-align:center;padding:4px 10px}
+.sugs{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 0}
+.sugs button{font-size:12px;border:1px solid var(--ring);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 11px}
+.sugs button:hover{border-color:var(--s1);color:var(--s1)}
+form.ask{display:flex;gap:8px;padding:12px 16px 16px}
+form.ask textarea{flex:1;resize:none;font:inherit;font-size:13.5px;padding:9px 11px;border-radius:10px;border:1px solid var(--ring);background:var(--sunk);color:var(--ink);height:44px}
+.dots::after{content:"…";animation:d 1s steps(3) infinite}
+@keyframes d{0%{content:"."}50%{content:".."}100%{content:"..."}}
+footer{margin:56px 0 0;border-top:1px solid var(--grid);padding:22px 0 40px;color:var(--muted);font-size:12px}
+footer p{margin:4px 0}footer a{color:var(--ink2)}
+</style>
+<!--DATA-->
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div class="logo" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-6 5 12 2.5-6H21"/></svg></div>
+      <div><div class="brand">HEDIS Public Intelligence</div><div class="sub" id="asof">Loading…</div></div>
+      <span class="pill">Public data only</span>
+      <div class="spacer"></div>
+      <button class="btn" id="refreshBtn" title="Recalculate from the cached public data">Refresh</button>
+      <button class="btn primary" id="askBtn">Ask the agent</button>
+    </div>
+    <nav aria-label="Sections">
+      <a href="#brief">Brief</a><a href="#measures">Measures</a><a href="#trends">Trends</a><a href="#states">States</a>
+      <a href="#counties">Counties</a><a href="#providers">Provider groups</a><a href="#campaigns">Campaigns</a>
+      <a href="#quality">Data quality</a><a href="#gaps">Not in public data</a><a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="intro" id="intro">
+    <span>👋 <b>Live demo</b> of an open-source HEDIS agent built only on public data (Medicaid Core Set, CMS, CDC). The chat panel runs when you clone the repo.</span>
+    <span class="spacer"></span>
+    <a class="btn" href="https://github.com/vivilicious-os/hedis-care-gap-agent" target="_blank" rel="noopener">View on GitHub →</a>
+  </div>
+
+  <section id="brief" style="margin-top:0">
+    <div class="hero">
+      <div><div class="eyebrow" id="heroEyebrow"></div><h1 id="heroTitle"></h1><p id="heroSub"></p></div>
+      <div class="hstats" id="hstats"></div>
+    </div>
+    <div class="grid two" style="margin-top:14px">
+      <div class="card"><h3>This morning</h3><ul class="headline" id="headline"></ul></div>
+      <div class="card"><h3>Work on first</h3><div id="plan"></div></div>
+    </div>
+  </section>
+
+  <section id="measures">
+    <div class="sh"><span class="num">01</span><h2 id="mTitle">Measures vs. national benchmarks</h2></div>
+    <p class="lede">State Medicaid rates from the latest Core Set, ranked by priority (gap to top quartile, members affected, below median, worsening trend), not by lowest rate. Hover a row for detail.</p>
+    <div class="card">
+      <div id="bullets"></div>
+      <div class="brow axisrow"><span></span><div class="axis"><span style="left:0">0%</span><span style="left:25%">25%</span><span style="left:50%">50%</span><span style="left:75%">75%</span><span style="left:100%">100%</span></div><span></span></div>
+      <div class="legend">
+        <span><i style="background:var(--s1)"></i>State rate</span>
+        <span><i style="background:var(--axis)"></i>Middle 50% of states</span>
+        <span><i style="background:var(--muted);width:2px;height:10px"></i>National median</span>
+        <span><i style="background:var(--ink);width:3px;height:12px"></i>Target = top-quartile state rate</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="trends">
+    <div class="sh"><span class="num">02</span><h2>Five-year trends</h2></div>
+    <p class="lede" id="tLede"></p>
+    <div class="spark" id="spark"></div>
+  </section>
+
+  <section id="states">
+    <div class="sh"><span class="num">03</span><h2>How every state compares</h2></div>
+    <p class="lede" id="sLede"></p>
+    <div class="card" id="strips"></div>
+  </section>
+
+  <section id="counties">
+    <div class="sh"><span class="num">04</span><h2>Communities</h2></div>
+    <p class="lede" id="cLede"></p>
+    <div class="card tablewrap"><table class="heat" id="ctable"></table>
+      <div class="scale">Worse than county median <span class="sw hl-neg3"></span><span class="sw hl-neg2"></span><span class="sw hl-neg1"></span><span class="sw hl-mid"></span><span class="sw hl-pos1"></span><span class="sw hl-pos2"></span><span class="sw hl-pos3"></span> Better · steps at 1, 3 and 6 points</div>
+    </div>
+  </section>
+
+  <section id="providers">
+    <div class="sh"><span class="num">05</span><h2>Provider groups</h2></div>
+    <p class="lede" id="pLede"></p>
+    <div class="card"><div class="tabs" id="ptabs"></div><div class="pstats" id="pstats"></div><div class="tablewrap"><table id="ptable"></table></div></div>
+  </section>
+
+  <section id="campaigns">
+    <div class="sh"><span class="num">06</span><h2>Campaigns to start</h2></div>
+    <p class="lede" id="campLede"></p>
+    <div class="klegend"><span><i style="background:var(--s1)"></i>Statewide Medicaid</span><span><i style="background:var(--s3)"></i>Community (county)</span><span><i style="background:var(--s2)"></i>Provider-group partnership</span></div>
+    <div class="grid camps" id="camps"></div>
+  </section>
+
+  <section id="quality">
+    <div class="sh"><span class="num">07</span><h2>Data quality</h2></div>
+    <p class="lede">Findings about the public sources, kept separate from performance.</p>
+    <div class="card tablewrap"><table id="dq"></table></div>
+  </section>
+
+  <section id="gaps">
+    <div class="sh"><span class="num">08</span><h2>Not available in public data</h2></div>
+    <p class="lede">Questions this agent will not answer from public data, and what it would need. Nothing is filled in or guessed.</p>
+    <div class="grid na" id="na"></div>
+  </section>
+
+  <section id="sources">
+    <div class="sh"><span class="num">09</span><h2>Where this data comes from</h2></div>
+    <p class="lede">Every number on this page comes from a public API. No patient, payer-file or EHR data is used.</p>
+    <div class="grid srcs" id="srcs"></div>
+  </section>
+
+  <footer>
+    <p><b>HEDIS Public Intelligence</b> · proof of concept · public data only · not for clinical decision-making.</p>
+    <p>Targets are public top-quartile state rates, not payer contract targets. Prioritization weights are illustrative and require business approval.</p>
+    <p>Sources: <a href="https://data.medicaid.gov/" target="_blank" rel="noopener">CMS, Medicaid &amp; CHIP Core Set</a> ·
+      <a href="https://data.cms.gov/provider-data/" target="_blank" rel="noopener">CMS Provider Data Catalog</a> ·
+      <a href="https://www.cdc.gov/places/" target="_blank" rel="noopener">CDC PLACES</a> ·
+      <a href="https://npiregistry.cms.hhs.gov/" target="_blank" rel="noopener">NPPES</a>.
+      HEDIS® is a registered trademark of NCQA.</p>
+    <p><a href="https://github.com/vivilicious-os/hedis-care-gap-agent" target="_blank" rel="noopener">Source code on GitHub</a></p>
+  </footer>
+</main>
+
+<div id="tip" role="tooltip"></div>
+
+<aside id="drawer" aria-label="Ask the agent">
+  <div class="dh"><div class="logo" aria-hidden="true" style="width:30px;height:30px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-6 5 12 2.5-6H21"/></svg></div>
+    <div class="t"><b>HEDIS agent</b><span>Claude · reads the same public data as this page</span></div>
+    <button class="btn" id="closeDrawer" aria-label="Close">✕</button></div>
+  <div id="msgs"><div class="msg sys" id="agentStatus">Ask about measures, trends, states, counties, provider groups or campaigns.</div></div>
+  <div class="sugs" id="sugs"></div>
+  <form class="ask" id="askForm"><textarea id="q" placeholder="Ask a question…" aria-label="Question"></textarea><button class="btn primary" type="submit">Send</button></form>
+</aside>
+
+<script>
+(function(){
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = n => (n ?? 0).toLocaleString("en-US");
+const f1 = x => x == null ? "—" : Number(x).toFixed(1);
+const STATIC = !!window.__HEDIS_DATA__;
+let D = null, session = null, ptab = null;
+
+const tip = $("#tip");
+document.addEventListener("mousemove", e => {
+  const t = e.target.closest("[data-tip]");
+  if (!t) { tip.style.opacity = 0; return; }
+  tip.textContent = t.dataset.tip;
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = Math.min(e.clientX + 14, innerWidth - w - 8) + "px";
+  tip.style.top = Math.min(e.clientY + 14, innerHeight - h - 8) + "px";
+  tip.style.opacity = 1;
+});
+function setScrollPad(){ const t = $(".top"); document.documentElement.style.scrollPaddingTop = (getComputedStyle(t).position === "sticky" ? t.offsetHeight + 8 : 8) + "px"; }
+addEventListener("resize", setScrollPad);
+
+async function load(){
+  D = STATIC ? window.__HEDIS_DATA__ : await (await fetch("/api/dashboard")).json();
+  render(); setScrollPad();
+  if (location.hash) setTimeout(() => { const el = document.querySelector(location.hash); if (el) el.scrollIntoView({behavior:"instant"}); }, 60);
+}
+$("#refreshBtn").onclick = async () => {
+  if (STATIC) { alert("This is a static snapshot. Run `python -m hedis_agent serve` locally for a live refresh."); return; }
+  $("#refreshBtn").textContent = "Refreshing…"; await fetch("/api/refresh", {method:"POST", body:"{}"}); await load(); $("#refreshBtn").textContent = "Refresh";
+};
+if (STATIC) $("#intro").classList.add("show");
+
+function render(){
+  const S = D.summary, ms = D.measures, rep = ms.filter(m => m.reported);
+  $("#asof").textContent = `${D.state} · Core Set ${D.latest_year} · public data fetched ${D.as_of}`;
+  $("#heroEyebrow").textContent = `Morning brief · ${D.state} Medicaid & CHIP`;
+  $("#heroTitle").textContent = `${S.top_quartile.length} measures in the top quartile, ${S.below_median.length} below the national median`;
+  $("#heroSub").textContent = `${S.measures_reported} of ${S.measures_tracked} tracked HEDIS-based measures reported in the ${D.latest_year} Core Set. Targets are the public top-quartile state rate.`;
+  const prov = Object.values(D.providers.measures), provNot = prov.reduce((a,p)=>a+p.patients_not_meeting,0);
+  const hs = [["Members to top quartile", "~" + fmt(S.members_to_top_quartile_total), "measures with a published member denominator"],
+    ["Improving since 2021", `${S.improving.length} of ${rep.length}`, "measures moving the right way"],
+    ["Provider groups", fmt(prov.reduce((a,p)=>Math.max(a,p.groups),0)), `in ${D.state} with CMS quality results`],
+    ["Patients not meeting", fmt(provNot), "across provider-group MIPS measures"]];
+  $("#hstats").innerHTML = hs.map(([l,v,s]) => `<div class="hstat"><div class="l">${esc(l)}</div><div class="v">${esc(v)}</div><div class="s">${esc(s)}</div></div>`).join("");
+  $("#headline").innerHTML = D.headline.map(h => `<li>${esc(h)}</li>`).join("");
+  $("#plan").innerHTML = D.plan.priorities.map(p => `<div class="plan-item"><div class="pn">${p.priority}</div><div><div class="pt">${esc(p.title)}</div><div class="pd">${esc(p.why)}</div><div class="pd">${esc(p.action)}</div></div></div>`).join("");
+
+  /* measures */
+  $("#mTitle").textContent = `${D.state} Medicaid measures vs. national benchmarks`;
+  $("#bullets").innerHTML = ms.map(m => {
+    const st = (m.status || "").split(" ")[0];
+    const lo = Math.min(m.bottom_quartile ?? 0, m.top_quartile ?? 0), hi = Math.max(m.bottom_quartile ?? 0, m.top_quartile ?? 0);
+    const tt = `${m.measure} — ${m.name}\n${m.reported ? m.rate_display : "Not reported by " + D.state}\nNational median ${f1(m.median)}% · top quartile ${f1(m.top_quartile)}% · bottom quartile ${f1(m.bottom_quartile)}% (${m.states_reporting} states)` +
+      (m.reported ? `\nRank #${m.rank} of ${m.of} · ${m.higher_is_better ? "higher" : "lower"} is better` : "") +
+      (m.members_to_top_quartile ? `\n~${fmt(m.members_to_top_quartile)} more members to reach the top quartile` : "") +
+      (m.trend_pts != null ? `\nTrend ${m.trend_pts > 0 ? "+" : ""}${m.trend_pts} pts (${m.trend_span})` : "") + `\nMethod: ${m.methodology || "—"} · ${m.abbr}`;
+    const right = m.reported ? `<span class="rate">${f1(m.rate)}%</span> <span class="dim">/ ${f1(m.top_quartile)}% target</span><br><span class="status st-${st}">${esc(m.status)} · #${m.rank}/${m.of}</span>` : `<span class="status st-Not">Not reported</span>`;
+    return `<div class="brow" data-tip="${esc(tt)}">
+      <div class="bname"><b>${m.rank_priority}. ${esc(m.measure)}</b><span class="chip">${esc(m.program)}</span><span class="full">${esc(m.name)}</span></div>
+      <div class="track" role="img" aria-label="${esc(m.measure)} ${m.rate ?? "not reported"}">
+        <span class="rail"></span>${m.bottom_quartile != null ? `<span class="iqr" style="left:${lo}%;width:${hi-lo}%"></span>` : ""}
+        ${m.reported ? `<span class="cur" style="width:${m.rate}%"></span>` : ""}
+        ${m.median != null ? `<span class="med" style="left:${m.median}%"></span>` : ""}
+        ${m.top_quartile != null ? `<span class="tgt" style="left:${m.top_quartile}%"></span>` : ""}</div>
+      <div class="bstat">${right}</div></div>`;
+  }).join("");
+
+  /* trends */
+  $("#tLede").textContent = `${D.state} rate (blue) vs. national median of states (gray), ${D.years[0]}–${D.years[D.years.length-1]}. Changes in specification or reporting method are noted; compare those years with care.`;
+  const yrs = D.years, x = y => 8 + (yrs.indexOf(y) / Math.max(yrs.length - 1, 1)) * 204;
+  $("#spark").innerHTML = D.trends.filter(t => t.points.some(p => p.rate != null)).map(t => {
+    const vals = t.points.flatMap(p => [p.rate, p.median]).filter(v => v != null);
+    const mn = Math.floor(Math.min(...vals) - 3), mx = Math.ceil(Math.max(...vals) + 3), y = v => 80 - (v - mn) / (mx - mn) * 70;
+    const path = k => t.points.filter(p => p[k] != null).map((p,i) => `${i ? "L" : "M"}${x(p.year).toFixed(1)},${y(p[k]).toFixed(1)}`).join("");
+    const last = [...t.points].reverse().find(p => p.rate != null);
+    const dots = t.points.filter(p => p.rate != null).map(p => `<circle cx="${x(p.year)}" cy="${y(p.rate)}" r="4" fill="var(--s1)" stroke="var(--card)" stroke-width="2"><title>${p.year}: ${p.rate}% (median ${p.median ?? "—"}%)</title></circle>`).join("");
+    const meas = ms.find(m => m.measure === t.measure) || {};
+    const good = t.change_pts == null ? "" : ((t.change_pts > 0) === (meas.higher_is_better !== false) ? "up" : "down");
+    return `<div class="card"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(t.measure)}</b><span class="delta">${t.change_pts != null ? `<span style="color:var(${good === "up" ? "--good-text" : "--crit"})">${t.change_pts > 0 ? "+" : ""}${t.change_pts} pts</span> · ${esc(t.span)}` : "one year"}</span></div>
+      <div class="dim" style="margin-bottom:4px">${esc(t.name)}</div>
+      <svg viewBox="0 0 220 90" preserveAspectRatio="none" role="img" aria-label="${esc(t.name)} trend">
+        <line x1="0" x2="220" y1="88" y2="88" stroke="var(--grid)"/>
+        <path d="${path("median")}" fill="none" stroke="var(--muted)" stroke-width="2"/>
+        <path d="${path("rate")}" fill="none" stroke="var(--s1)" stroke-width="2.5"/>${dots}
+        ${yrs.map(yy => `<text x="${x(yy)}" y="100" font-size="9" fill="var(--muted)" text-anchor="middle">${String(yy).slice(2)}</text>`).join("")}
+      </svg>
+      <div class="dim" style="margin-top:12px">Latest ${last ? f1(last.rate) + "%" : "—"}${t.comparability_notes.length ? " · ⚠ " + esc(t.comparability_notes.join("; ")) : ""}</div></div>`;
+  }).join("");
+
+  /* states strip plot */
+  const G = D.states;
+  $("#sLede").textContent = `Each dot is one state's latest Medicaid rate; ${D.state} is the large blue dot and the tick is the national median. Hover a dot for the state.`;
+  $("#strips").innerHTML = G.measures.map(c => {
+    const pts = G.states.map(s => ({s: s.state, v: s.cells[c]?.rate})).filter(p => p.v != null);
+    const f = pts.find(p => p.s === G.focus), med = G.states.find(s => s.cells[c])?.cells[c].median;
+    const m = ms.find(z => z.measure === c) || {name: c};
+    return `<div class="strip"><div><b>${esc(c)}</b> <span class="dim">${esc(m.name)}</span></div>
+      <svg viewBox="0 0 1000 26" preserveAspectRatio="none" role="img" aria-label="${esc(c)} by state">
+        <line x1="0" x2="1000" y1="13" y2="13" stroke="var(--grid)" stroke-width="2"/>
+        ${med != null ? `<line x1="${med*10}" x2="${med*10}" y1="3" y2="23" stroke="var(--muted)" stroke-width="3"/>` : ""}
+        ${pts.filter(p => p !== f).map(p => `<circle cx="${p.v*10}" cy="13" r="5" fill="var(--axis)" opacity=".8"><title>${esc(p.s)}: ${p.v}%</title></circle>`).join("")}
+        ${f ? `<circle cx="${f.v*10}" cy="13" r="9" fill="var(--s1)" stroke="var(--card)" stroke-width="3"><title>${esc(f.s)}: ${f.v}%</title></circle>` : ""}
+      </svg><div class="n" style="text-align:right;font-variant-numeric:tabular-nums">${f ? f1(f.v) + "%" : '<span class="dim">n/r</span>'}</div></div>`;
+  }).join("");
+
+  /* counties */
+  const C = D.counties, keys = Object.keys(C.indicators);
+  $("#cLede").textContent = `${C.counties.length} ${D.state} counties, largest first. Cells are colored by distance from the ${D.state} county median (red = worse). ${C.note}`;
+  const ccls = (k, v) => { const md = C.county_median[k]; if (v == null || md == null) return "hl-mid"; let d = v - md; if (!C.higher_is_better[k]) d = -d;
+    return d <= -6 ? "hl-neg3" : d <= -3 ? "hl-neg2" : d <= -1 ? "hl-neg1" : d < 1 ? "hl-mid" : d < 3 ? "hl-pos1" : d < 6 ? "hl-pos2" : "hl-pos3"; };
+  $("#ctable").innerHTML = `<thead><tr><th>County</th><th class="n">Adults</th>${keys.map(k => `<th style="text-align:center" title="${esc(C.indicators[k])}">${esc(C.indicators[k].split(" (")[0])}</th>`).join("")}<th class="n">Est. adults w/ diabetes</th></tr></thead><tbody>` +
+    C.counties.slice(0, 20).map(c => `<tr><td><b>${esc(c.county)}</b></td><td class="n">${fmt(c.adults)}</td>` +
+      keys.map(k => `<td class="cell ${ccls(k, c.indicators[k])}" data-tip="${esc(c.county)} · ${esc(C.indicators[k])}\n${f1(c.indicators[k])}% (county median ${f1(C.county_median[k])}%)">${f1(c.indicators[k])}</td>`).join("") +
+      `<td class="n">${fmt(c.est_adults_with_diabetes)}</td></tr>`).join("") + `</tbody>`;
+
+  /* providers */
+  const P = D.providers.measures, pk = Object.keys(P);
+  $("#pLede").textContent = `Real CMS quality results for provider groups practicing in ${D.state}, largest opportunity first. ${D.providers.note}`;
+  if (!ptab || !P[ptab]) ptab = pk[0];
+  $("#ptabs").innerHTML = pk.map(k => `<button type="button" data-ptab="${esc(k)}" class="${k === ptab ? "on" : ""}">${esc(P[k].name.split(" (")[0])}</button>`).join("");
+  renderProv();
+
+  /* campaigns */
+  $("#campLede").textContent = `Top ${D.campaigns.campaigns.length} of ${D.campaigns.total} campaign ideas built from public data. ${D.campaigns.disclaimer}`;
+  $("#camps").innerHTML = D.campaigns.campaigns.map(c => `<div class="card camp k-${esc(c.kind.split(" ")[0])}">
+      <div class="hd"><div><div class="kind"><i></i>${esc(c.kind)}</div><div class="nm">${esc(c.name)}</div></div><span class="rank">#${c.rank}</span></div>
+      <div class="size"><b>${esc(c.size_label)}</b></div>
+      <div class="targets">${c.targets.map(t => `<span>${esc(t)}</span>`).join("")}</div>
+      <div class="why">${esc(c.why.join(" · "))}</div>
+      <div class="why"><b>Channel:</b> ${esc(c.channel)}</div>
+      <div class="acts"><button class="btn" data-askc="${c.rank}">Ask agent</button></div></div>`).join("");
+
+  $("#dq").innerHTML = `<thead><tr><th>Check</th><th class="n">Count</th><th>Detail</th></tr></thead><tbody>` + D.data_quality.checks.map(c =>
+    `<tr><td class="${c.flag ? "flag" : "okc"}">${esc(c.check)}</td><td class="n">${fmt(c.count)}</td><td class="dim">${esc(c.detail)}</td></tr>`).join("") + `</tbody>`;
+  $("#na").innerHTML = D.not_available.map(n => `<div class="card"><h3>${esc(n.question)}</h3><div class="dim">${esc(n.why)}</div><p style="margin:8px 0 0;font-size:12.5px"><b>Would need:</b> ${esc(n.needs)}</p></div>`).join("");
+  $("#srcs").innerHTML = D.sources.map(s => `<div class="card src"><div class="kind${s.kind === "Public API" ? " pub" : ""}">${esc(s.kind)}</div>
+      <h3>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name)}</h3>
+      <div class="dim">${esc(s.detail)}</div><p style="margin:8px 0 4px;font-size:13px"><b>Feeds:</b> ${esc(s.feeds)}</p>
+      ${(s.notes||[]).length ? `<ul>${s.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}</div>`).join("");
+}
+
+function renderProv(){
+  const p = D.providers.measures[ptab]; if (!p) return;
+  document.querySelectorAll("#ptabs button").forEach(b => b.classList.toggle("on", b.dataset.ptab === ptab));
+  $("#pstats").innerHTML = `<div><b>${fmt(p.groups)}</b>groups</div><div><b>${fmt(p.patients)}</b>patients</div><div><b>${f1(p.state_patient_weighted_rate)}%</b>${esc(D.state)} rate (patient-weighted)</div><div><b>${f1(p.national_median)}%</b>national median</div><div><b>${fmt(p.patients_not_meeting)}</b>patients not meeting</div>` + (p.higher_is_better ? "" : `<div><b>↓</b>lower is better</div>`);
+  $("#ptable").innerHTML = `<thead><tr><th>Provider group</th><th>Cities</th><th class="n">Rate</th><th class="n">Patients</th><th class="n">Not meeting</th><th>Signals</th></tr></thead><tbody>` +
+    p.top.map(g => `<tr><td><b>${esc(g.provider)}</b><br><span class="dim">${esc(g.clinicians)} · ${esc(g.collection_type)}</span></td><td class="dim">${esc(g.cities)}</td><td class="n">${f1(g.rate)}%</td><td class="n">${fmt(g.patients)}</td><td class="n">${fmt(g.patients_not_meeting)}</td><td>${g.flags.map(fl => `<span class="chip" style="margin:1px 3px 1px 0">${esc(fl)}</span>`).join("")}</td></tr>`).join("") + `</tbody>`;
+}
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-ptab]"); if (t) { ptab = t.dataset.ptab; renderProv(); }
+  const k = e.target.closest("[data-askc]");
+  if (k) { const c = D.campaigns.campaigns.find(x => String(x.rank) === k.dataset.askc);
+    openDrawer(`Tell me about the "${c.name}" campaign: why it ranks #${c.rank}, who it targets, and what we would need to measure its impact.`); }
+});
+
+const SUGS = ["How is our state doing?", "What should we work on first?", "Which counties need a colorectal screening push?", "Which provider groups have the biggest blood-pressure gap?", "What can't public data tell us?"];
+$("#sugs").innerHTML = SUGS.map(s => `<button type="button">${esc(s)}</button>`).join("");
+$("#sugs").addEventListener("click", e => { if (e.target.tagName === "BUTTON") send(e.target.textContent); });
+$("#askBtn").onclick = () => openDrawer();
+$("#closeDrawer").onclick = () => $("#drawer").classList.remove("open");
+document.addEventListener("keydown", e => { if (e.key === "Escape") $("#drawer").classList.remove("open"); });
+$("#askForm").addEventListener("submit", e => { e.preventDefault(); const v = $("#q").value.trim(); if (v) send(v); });
+$("#q").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("#askForm").requestSubmit(); } });
+async function openDrawer(prefill){
+  $("#drawer").classList.add("open");
+  if (STATIC) $("#agentStatus").innerHTML = 'This public copy is a static snapshot, so chat is off. Clone the <a href="https://github.com/vivilicious-os/hedis-care-gap-agent" target="_blank" rel="noopener">repo</a> and run <code>python -m hedis_agent serve</code> with an Anthropic API key.';
+  else { try { const s = await (await fetch("/api/status")).json(); if (!s.available) $("#agentStatus").textContent = s.reason; } catch {} }
+  if (prefill) $("#q").value = prefill;
+  $("#q").focus();
+}
+function md(src){
+  const lines = esc(src).split("\n"); let out = [], i = 0;
+  const inline = s => s.replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/`([^`]+)`/g,"<code>$1</code>");
+  while (i < lines.length) {
+    const l = lines[i];
+    if (/^\s*\|.*\|\s*$/.test(l) && i+1 < lines.length && /^\s*\|[\s:\-|]+\|\s*$/.test(lines[i+1])) {
+      const cells = r => r.trim().replace(/^\||\|$/g,"").split("|").map(c=>inline(c.trim()));
+      let h = `<table><tr>${cells(l).map(c=>`<th>${c}</th>`).join("")}</tr>`; i += 2;
+      while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) { h += `<tr>${cells(lines[i]).map(c=>`<td>${c}</td>`).join("")}</tr>`; i++; }
+      out.push(`<div class="tablewrap">${h}</table></div>`); continue;
+    }
+    if (/^\s*[-*•] /.test(l)) { let h = "<ul>"; while (i < lines.length && /^\s*[-*•] /.test(lines[i])) { h += `<li>${inline(lines[i].replace(/^\s*[-*•] /,""))}</li>`; i++; } out.push(h+"</ul>"); continue; }
+    if (/^\s*\d+\. /.test(l)) { let h = "<ol>"; while (i < lines.length && /^\s*\d+\. /.test(lines[i])) { h += `<li>${inline(lines[i].replace(/^\s*\d+\. /,""))}</li>`; i++; } out.push(h+"</ol>"); continue; }
+    const hm = l.match(/^#{1,4} (.*)/); if (hm) { out.push(`<p><b>${inline(hm[1])}</b></p>`); i++; continue; }
+    if (l.trim()) out.push(`<p>${inline(l)}</p>`);
+    i++;
+  }
+  return out.join("");
+}
+async function send(text){
+  $("#q").value = ""; const msgs = $("#msgs");
+  msgs.insertAdjacentHTML("beforeend", `<div class="msg user">${esc(text)}</div>`);
+  if (STATIC) { msgs.insertAdjacentHTML("beforeend", `<div class="msg sys">Chat needs the local server: run <code>python -m hedis_agent serve</code>.</div>`); msgs.scrollTop = msgs.scrollHeight; return; }
+  const wait = document.createElement("div"); wait.className = "msg bot"; wait.innerHTML = `<span class="dots">Working through the data</span>`;
+  msgs.appendChild(wait); msgs.scrollTop = msgs.scrollHeight;
+  try {
+    const r = await fetch("/api/ask", {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify({question:text, session})});
+    const j = await r.json(); if (j.session) session = j.session;
+    wait.innerHTML = r.ok ? md(j.answer) : `<p>${esc(j.error || "Something went wrong.")}</p>`;
+  } catch (err) { wait.innerHTML = "<p>Could not reach the local server.</p>"; }
+  msgs.scrollTop = msgs.scrollHeight;
+}
+load().catch(err => { $("#asof").textContent = "Could not load data: " + err; });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{
+ "source": "data.cms.gov Provider Data Catalog",
+ "dataset_id": "0ba7-2cb0",
+ "dataset_title": "PY 2024 Group Public Reporting: MIPS Measures and Attestations",
+ "dataset_url": "https://data.cms.gov/provider-data/dataset/0ba7-2cb0",
+ "modified": "2026-08-24",
+ "fetched": "2026-11-01",
+ "caveat": "CMS MIPS clinician-group public reporting (largely Medicare Part B). Related to, but not the same as, HEDIS measures; not NCQA benchmarks or payer targets.",
+ "measures": {
+  "CBP": {
+   "measure_cd": "MIPS_GRP_236_overall",
+   "title": "Controlling High Blood Pressure (MIPS #236)",
+   "higher_is_better": true,
+   "groups": 4589,
+   "patients": 19587115,
+   "median": 72.0,
+   "p25": 62.0,
+   "p75": 82.0,
+   "patient_weighted_rate": 70.8
+  },
+  "CCS": {
+   "measure_cd": "MIPS_GRP_309_overall",
+   "title": "Cervical Cancer Screening (MIPS #309)",
+   "higher_is_better": true,
+   "groups": 2124,
+   "patients": 23948281,
+   "median": 46.0,
+   "p25": 28.0,
+   "p75": 60.0,
+   "patient_weighted_rate": 52.5
+  },
+  "HBA1C>9": {
+   "measure_cd": "MIPS_GRP_001_overall",
+   "title": "Diabetes: HbA1c Poor Control >9% (MIPS #001)",
+   "higher_is_better": false,
+   "groups": 3721,
+   "patients": 10026735,
+   "median": 28.0,
+   "p25": 19.0,
+   "p75": 47.0,
+   "patient_weighted_rate": 30.2
+  },
+  "EED": {
+   "measure_cd": "MIPS_GRP_117_overall",
+   "title": "Diabetes: Eye Exam (MIPS #117)",
+   "higher_is_better": true,
+   "groups": 3301,
+   "patients": 8221649,
+   "median": 96.0,
+   "p25": 24.0,
+   "p75": 100.0,
+   "patient_weighted_rate": 57.8
+  },
+  "DSF": {
+   "measure_cd": "MIPS_GRP_134_overall",
+   "title": "Depression Screening & Follow-Up (MIPS #134)",
+   "higher_is_better": true,
+   "groups": 2513,
+   "patients": 66047853,
+   "median": 44.0,
+   "p25": 16.0,
+   "p75": 77.0,
+   "patient_weighted_rate": 42.7
+  }
+ }
+}

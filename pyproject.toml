@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hedis-care-gap-agent"
+version = "1.0.0"
+description = "HEDIS intelligence agent for value-based care teams, built only on public CMS, Medicaid and CDC data"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "vivilicious-os" }]
+keywords = ["hedis", "value-based-care", "population-health", "care-gaps", "claude", "ai-agent", "cms", "medicaid"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = []
+
+[project.optional-dependencies]
+agent = ["anthropic>=2.3.0"]
+
+[project.scripts]
+hedis-agent = "hedis_agent.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/vivilicious-os/hedis-care-gap-agent"
+
+[tool.setuptools]
+packages = ["hedis_agent"]
+
+[tool.setuptools.package-data]
+hedis_agent = ["web/*.html"]

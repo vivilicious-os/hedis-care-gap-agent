@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# per-NPI registry lookups stay local
+data/public/nppes_npi_cache.json
+.claude/
+output/morning/
+*.egg-info/
+build/
+dist/
